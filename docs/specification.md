@@ -17,6 +17,8 @@
 | 👤 **Author** | *books*, *followers*, *events* ❓, *publishers* ❓ |
 | 👥 **Publisher** 💶 | *books*, *authors*, *followers*, *events* ❓ |
 | 👥 **Dealer** 💶❓ | *book links* |
+| 👥 **Editor** | has authority to edit particular books |
+| 👥 **Admin** | has authority to edit all kind of data and manage editors |
 
 ---
 
@@ -26,6 +28,8 @@
 - Series (Consist of books)
 - Events ❓
 - Members
+- Editors
+- Admins
 - Authors
 - Publishers (Consist of members) ❓
 - Dealers (Consist of members) ❓
@@ -40,6 +44,10 @@
 | 👻 **Guest** |   |   |   |   |   |
 |   |   |   |   |   |   |
 | 👤 **Member** |   |   |   |   |   |
+|   |   |   |   |   |   |
+| 👥 **Editor** |   |   |   |   |   |
+|   |   |   |   |   |   |
+| 👥 **Admin** |   |   |   |   |   |
 |   |   |   |   |   |   |
 | 👤 **Author** |   |   |   |   |   |
 |   |   |   |   |   |   |
