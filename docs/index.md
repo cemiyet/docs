@@ -2,4 +2,4 @@
 
 **Status**: Writing specification;
 
- [Specification](/specification/)
+ [Specification](cemiyet/specification/)
