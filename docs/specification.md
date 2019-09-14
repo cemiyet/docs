@@ -77,3 +77,25 @@ Status: Work-in-progress.
 ![Work-in-progress Entity-Relationship Diagram](img/ERD.png "Work-in-progress Entity-Relationship Diagram")
 
 ---
+
+## Feature Roadmap
+
+- v0.1:
+
+- v0.2:
+
+- v0.3:
+
+- v0.4: 
+
+- v0.5:
+
+- v0.6:
+
+- v0.7:
+
+- v0.8:
+
+- v0.9:
+
+- **v1.0 (MVP):**
