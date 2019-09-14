@@ -45,6 +45,9 @@
 - Publishers (Consist of members)
 - Dealers (Consist of members) ❓
 - Cemiyets (Consist of members) ❓
+- Translators ❓
+- Languages ❓
+- Ratings ❓
 
 ---
 
