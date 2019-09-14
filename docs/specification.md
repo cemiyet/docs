@@ -34,13 +34,15 @@
 ## Models
 
 - Books
+- Categories
+- Tags ❓
 - Series (Consist of books)
 - Events ❓
 - Members
 - Editors (Consist of members)
 - Admins (Consist of members)
 - Authors
-- Publishers (Consist of members) ❓
+- Publishers (Consist of members)
 - Dealers (Consist of members) ❓
 - Cemiyets (Consist of members) ❓
 
@@ -50,17 +52,17 @@
 
 | As a/an | I want to... | So that... | Notes | Priority | Status |
 |--|--|--|--|--|--|
-| 👻 **Guest** |   |   |   |   |   |
+| 👻 **Guest** |   |   |   |   | TODO |
 |   |   |   |   |   |   |
-| 👤 **Member** |   |   |   |   |   |
+| 👤 **Member** |   |   |   |   | TODO |
 |   |   |   |   |   |   |
-| 👥 **Editor** |   |   |   |   |   |
+| 👥 **Editor** |   |   |   |   | TODO |
 |   |   |   |   |   |   |
-| 👥 **Admin** |   |   |   |   |   |
+| 👥 **Admin** |   |   |   |   | TODO |
 |   |   |   |   |   |   |
-| 👤 **Author** |   |   |   |   |   |
+| 👤 **Author** |   |   |   |   | TODO |
 |   |   |   |   |   |   |
-| 👥 **Publisher** |   |   |   |   |   |
+| 👥 **Publisher** |   |   |   |   | TODO |
 |   |   |   |   |   |   |
-| 👥 **Dealer** |   |   |   |   |   |
-|   |   |   |   |   |   |
+| 👥 **Dealer** |   |   |   |   | TODO |
+|   |   |   |   |   | TODO |
