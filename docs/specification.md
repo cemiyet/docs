@@ -5,6 +5,8 @@
 | ❓ | it's not accepted yet |
 | 💶 | potential income model |
 | 🆘 | help needed |
+| 🎞️ | back-end related |
+| 🖼️ | front-end related |
 
 ---
 
@@ -86,7 +88,7 @@ Status: Work-in-progress.
 
 - v0.3:
 
-- v0.4: 
+- v0.4:
 
 - v0.5:
 
@@ -98,4 +100,4 @@ Status: Work-in-progress.
 
 - v0.9:
 
-- **v1.0 (MVP):**
+- **v1.0 - Ötüken (MVP):**
