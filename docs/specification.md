@@ -34,7 +34,7 @@
 ## Models
 
 - Books
-- Categories
+- Genres
 - Tags ❓
 - Series (Consist of books)
 - Events ❓
