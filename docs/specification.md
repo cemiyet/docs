@@ -35,16 +35,16 @@
 
 - Books
 - Genres
-- Tags ❓
-- Series (Consist of books)
-- Events ❓
+- Series
 - Members
-- Editors (Consist of members)
-- Admins (Consist of members)
+- Editors
+- Admins
 - Authors
-- Publishers (Consist of members)
-- Dealers (Consist of members) ❓
-- Cemiyets (Consist of members) ❓
+- Publishers
+- Tags ❓
+- Events ❓
+- Dealers ❓
+- Cemiyets ❓
 - Translators ❓
 - Languages ❓
 - Ratings ❓
