@@ -26,8 +26,29 @@
 |--|--|
 | 👥 **Dealer** 💶❓ | edit links to books |
 | 👥 **Publisher** 💶 | edit books, book series, authors, events ❓ |
-| 👥 **Editor** | edit particular books (by category, by author) |
+| 👥 **Editor** | edit particular books (by genre, by author) |
 | 👥 **Admin** | edit all kind of data and manage editors |
+
+---
+
+## Requirements
+
+| As a/an | I want to... | So that... | Notes | Priority | Status |
+|--|--|--|--|--|--|
+| 👻 **Guest** |   |   |   |   | TODO |
+|   |   |   |   |   |   |
+| 👤 **Member** |   |   |   |   | TODO |
+|   |   |   |   |   |   |
+| 👥 **Editor** |   |   |   |   | TODO |
+|   |   |   |   |   |   |
+| 👥 **Admin** |   |   |   |   | TODO |
+|   |   |   |   |   |   |
+| 👤 **Author** |   |   |   |   | TODO |
+|   |   |   |   |   |   |
+| 👥 **Publisher** |   |   |   |   | TODO |
+|   |   |   |   |   |   |
+| 👥 **Dealer** |   |   |   |   | TODO |
+|   |   |   |   |   | TODO |
 
 ---
 
@@ -56,22 +77,3 @@ Status: Work-in-progress.
 ![Work-in-progress Entity-Relationship Diagram](img/ERD.png "Work-in-progress Entity-Relationship Diagram")
 
 ---
-
-## Requirements
-
-| As a/an | I want to... | So that... | Notes | Priority | Status |
-|--|--|--|--|--|--|
-| 👻 **Guest** |   |   |   |   | TODO |
-|   |   |   |   |   |   |
-| 👤 **Member** |   |   |   |   | TODO |
-|   |   |   |   |   |   |
-| 👥 **Editor** |   |   |   |   | TODO |
-|   |   |   |   |   |   |
-| 👥 **Admin** |   |   |   |   | TODO |
-|   |   |   |   |   |   |
-| 👤 **Author** |   |   |   |   | TODO |
-|   |   |   |   |   |   |
-| 👥 **Publisher** |   |   |   |   | TODO |
-|   |   |   |   |   |   |
-| 👥 **Dealer** |   |   |   |   | TODO |
-|   |   |   |   |   | TODO |
