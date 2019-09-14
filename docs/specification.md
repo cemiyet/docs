@@ -49,6 +49,12 @@
 - Languages ❓
 - Ratings ❓
 
+## Entity-Relationship Diagram
+
+Status: Work-in-progress.
+
+![Work-in-progress Entity-Relationship Diagram](img/ERD.png "Work-in-progress Entity-Relationship Diagram")
+
 ---
 
 ## Requirements
