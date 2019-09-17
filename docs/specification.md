@@ -82,22 +82,33 @@ Status: Work-in-progress.
 
 ## Feature Roadmap
 
-- v0.1:
-
-- v0.2:
-
-- v0.3:
-
-- v0.4:
-
-- v0.5:
-
-- v0.6:
-
-- v0.7:
-
-- v0.8:
-
-- v0.9:
-
+- **v0.1 - Genres & Tags Update:**
+    - CRUD operations for Genre & Tag models.
+- **v0.2 - Authors & Publishers Update:**
+    - CRUD operations for Author & Publisher models.
+- **v0.3 - Books Update:**
+    - CRUD operations for Book & Dimension models.
+    - Basic relations between books and related models. (authors, publishers etc.)
+- **v0.4 - Members Update:**
+    - CRUD operations for Member model.
+    - Complete Authentication system.
+- **v0.5 - Ratings Update:**
+    - CRUD operations for Rating related models.
+    - Basic rating system.
+    - Basic relations between ratings, members and books.
+- **v0.6 - Lists Update:**
+    - CRUD operations for Book List models.
+    - Advanced relationships between books and users/authors/publishers via custom lists.
+- **v0.7 - Admins & Editors Update:**
+    - CRUD operations for Admin & Editor models.
+    - Complete Authorization system.
+    - Complete CMS for Admins/Editors.
+- **v0.8 - Authors & Publishers Enhancement Update:**
+    - Advanced relationships and interactions between authors, publishers and books, members.
+- **v0.9 - Dealers Update:**
+    - CRUD operations for Dealer model.
 - **v1.0 - Ötüken (MVP):**
+    - Complete Authentication/Authorization system.
+    - Future-proof book centered model system.
+    - Complete management panels for Admins & Editors.
+    - Special actors and interaction microsystems that could lead to potential income models.
