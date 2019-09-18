@@ -56,21 +56,25 @@
 
 ## Models
 
-- Books
-- Genres
-- Series
-- Members
-- Editors
-- Admins
-- Authors
-- Publishers
-- Tags ❓
-- Events ❓
-- Dealers ❓
-- Cemiyets ❓
-- Translators ❓
-- Languages ❓
-- Ratings ❓
+- **1st Generation:**
+    - Books
+    - Genres
+    - Dimensions
+    - Authors
+    - Publishers
+    - Translators ❓
+    - Members
+    - Dealers ❓
+- **2nd Generation (Depends on 1st Generation):**
+    - Series
+    - Admins
+    - Editors
+    - Tags ❓
+    - Cemiyets ❓
+    - Ratings ❓
+    - Languages ❓
+- **3rd Generation (Depends on 1st & 2nd Generations):**
+    - Events ❓
 
 ## Entity-Relationship Diagram
 
