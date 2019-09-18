@@ -82,23 +82,24 @@ Status: Work-in-progress.
 
 ## Feature Roadmap
 
-- **v0.1 - Genres & Tags Update:**
-    - CRUD operations for Genre & Tag models.
+- **v0.1 - Genres & Dimensions Update:**
+    - CRUD operations for Genre & Dimension models.
 - **v0.2 - Authors & Publishers Update:**
     - CRUD operations for Author & Publisher models.
 - **v0.3 - Books Update:**
-    - CRUD operations for Book & Dimension models.
+    - CRUD operations for Book & Serie models.
     - Basic relations between books and related models. (authors, publishers etc.)
 - **v0.4 - Members Update:**
     - CRUD operations for Member model.
     - Complete Authentication system.
-- **v0.5 - Ratings Update:**
-    - CRUD operations for Rating related models.
+- **v0.5 - Ratings & Lists Update:**
+    - CRUD operations for Rating & List related models.
     - Basic rating system.
     - Basic relations between ratings, members and books.
-- **v0.6 - Lists Update:**
     - CRUD operations for Book List models.
     - Advanced relationships between books and users/authors/publishers via custom lists.
+- **v0.6 - Tags Update:** ❓
+    - CRUD operations for User/Book Tag models.
 - **v0.7 - Admins & Editors Update:**
     - CRUD operations for Admin & Editor models.
     - Complete Authorization system.
