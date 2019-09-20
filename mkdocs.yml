@@ -2,4 +2,6 @@ site_name: Cemiyet
 theme: readthedocs
 nav:
   - Home: index.md
-  - Specification: specification.md
+  - Requirements: requirements.md
+  - Data Specification: data-specification.md
+  - Roadmap: roadmap.md
