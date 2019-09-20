@@ -78,13 +78,15 @@
 
 ## Entity-Relationship Diagram
 
-Status: Work-in-progress.
+Status: Feature frozen until v0.6. New iteration will be held after *Ratings & Lists* update.
 
-![Work-in-progress Entity-Relationship Diagram](img/ERD.png "Work-in-progress Entity-Relationship Diagram")
+![Entity-Relationship Diagram v0.5](img/ERD.png "Entity-Relationship Diagram v0.5")
 
 ---
 
 ## Feature Roadmap
+
+Before starting development for every version, initial backlog should be present for *itself and next version*.
 
 - **v0.1 - Genres & Dimensions Update:**
     - CRUD operations for Genre & Dimension models.
