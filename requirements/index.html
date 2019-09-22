@@ -123,7 +123,7 @@
 <td>nothing.</td>
 </tr>
 <tr>
-<td>👤 <strong>Member</strong></td>
+<td>👤 <strong>User</strong></td>
 <td><em>book lists</em></td>
 </tr>
 <tr>
@@ -177,129 +177,242 @@
 </table>
 <hr />
 <h2 id="requirements">Requirements</h2>
+<p>Below are fundamental requirements per actor.</p>
+<p>Their purpose is to create a reference material for features.</p>
+<hr />
+<p>As a 👻 <strong>Guest</strong>:</p>
 <table>
 <thead>
 <tr>
-<th>As a/an</th>
 <th>I want to...</th>
-<th>So that...</th>
 <th>Notes</th>
-<th>Priority</th>
 <th>Status</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>👻 <strong>Guest</strong></td>
+<td>Search a book by it's title.</td>
 <td></td>
-<td></td>
-<td></td>
-<td></td>
-<td>TODO</td>
+<td>TO DO</td>
 </tr>
+<tr>
+<td>Search an author by name.</td>
+<td></td>
+<td>TO DO</td>
+</tr>
+<tr>
+<td>Search a publisher by it's name.</td>
+<td></td>
+<td>TO DO</td>
+</tr>
+<tr>
+<td>Search an user by it's username.</td>
+<td></td>
+<td>TO DO</td>
+</tr>
+<tr>
+<td>See user profile.</td>
+<td>User profile must be public.</td>
+<td>TO DO</td>
+</tr>
+<tr>
+<td>See book detail page.</td>
+<td></td>
+<td>TO DO</td>
+</tr>
+<tr>
+<td>See author detail page.</td>
+<td></td>
+<td>TO DO</td>
+</tr>
+<tr>
+<td>See publisher detail page.</td>
+<td></td>
+<td>TO DO</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>As an 👤 <strong>User</strong>:</p>
+<p>Same as <u><em>Guest</em></u>, plus;</p>
+<table>
+<thead>
+<tr>
+<th>I want to...</th>
+<th>Notes</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Search a book by it's isbn/barcode.</td>
+<td></td>
+<td>TO DO</td>
+</tr>
+<tr>
+<td>Filter search results.</td>
+<td></td>
+<td>TO DO</td>
+</tr>
+<tr>
+<td>Create book lists.</td>
+<td></td>
+<td>TO DO</td>
+</tr>
+<tr>
+<td>Edit my book lists.</td>
+<td></td>
+<td>TO DO</td>
+</tr>
+<tr>
+<td>Add any unread book to read list.</td>
+<td>Book must be unread.</td>
+<td>TO DO</td>
+</tr>
+<tr>
+<td>Mark any book as read.</td>
+<td></td>
+<td>TO DO</td>
+</tr>
+<tr>
+<td>Rate any read book out of 10.</td>
+<td>Book must be marked as read.</td>
+<td>TO DO</td>
+</tr>
+<tr>
+<td>See user's book lists on their profile page.</td>
+<td>User profile and list must be public.</td>
+<td>TO DO</td>
+</tr>
+<tr>
+<td>See publisher's book lists and book series on detail page.</td>
+<td></td>
+<td>TO DO</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>As an 👤 <strong>Author</strong>:</p>
+<p>Same as <u><em>User</em></u>, plus;</p>
+<table>
+<thead>
+<tr>
+<th>I want to...</th>
+<th>Notes</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>List my books.</td>
+<td></td>
+<td>TO DO</td>
+</tr>
+<tr>
+<td>Update the information of my books.</td>
+<td></td>
+<td>TO DO</td>
+</tr>
+<tr>
+<td>Add new book to my books.</td>
+<td></td>
+<td>TO DO</td>
+</tr>
+<tr>
+<td>Send request to publisher to remove book.</td>
+<td>The book must have been added by the author or the publisher. Otherwise, author can send a request to the their editor.</td>
+<td>TO DO</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>As a 👥 <strong>Publisher</strong>:</p>
+<p>Same as <u><em>User</em></u>, plus;</p>
+<table>
+<thead>
+<tr>
+<th>I want to...</th>
+<th>Notes</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>List books published by us.</td>
+<td></td>
+<td>TO DO</td>
+</tr>
+<tr>
+<td>Update the information of our books.</td>
+<td></td>
+<td>TO DO</td>
+</tr>
+<tr>
+<td>Add new book to our books.</td>
+<td></td>
+<td>TO DO</td>
+</tr>
+<tr>
+<td>Delete book from our books.</td>
+<td>The book must have been added by the publisher. Otherwise, publisher should send a request to the their editor.</td>
+<td>TO DO</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>As an 👥 <strong>Editor</strong>:</p>
+<p>Same as <u><em>User</em></u>, plus;</p>
+<table>
+<thead>
+<tr>
+<th>I want to...</th>
+<th>Notes</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td></td>
 <td></td>
 <td></td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
+</tbody>
+</table>
+<hr />
+<p>As an 👥 <strong>Admin</strong>:</p>
+<p>Same as <u><em>User</em></u>, plus;</p>
+<table>
+<thead>
 <tr>
-<td>👤 <strong>Member</strong></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td>TODO</td>
+<th>I want to...</th>
+<th>Notes</th>
+<th>Status</th>
 </tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>👥 <strong>Editor</strong></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td>TODO</td>
-</tr>
+</thead>
+<tbody>
 <tr>
 <td></td>
 <td></td>
 <td></td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
+</tbody>
+</table>
+<hr />
+<p>As a 👥 <strong>Dealer</strong>:</p>
+<p>Same as <u><em>User</em></u>, plus;</p>
+<table>
+<thead>
 <tr>
-<td>👥 <strong>Admin</strong></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td>TODO</td>
+<th>I want to...</th>
+<th>Notes</th>
+<th>Status</th>
 </tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>👤 <strong>Author</strong></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td>TODO</td>
-</tr>
+</thead>
+<tbody>
 <tr>
 <td></td>
 <td></td>
 <td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>👥 <strong>Publisher</strong></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td>TODO</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>👥 <strong>Dealer</strong></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td>TODO</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td>TODO</td>
 </tr>
 </tbody>
 </table>
