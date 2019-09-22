@@ -25,3 +25,12 @@
 Status: Feature frozen until v0.6. New iteration will be held after *Ratings & Lists* update.
 
 ![Entity-Relationship Diagram v0.5](img/ERD.png "Entity-Relationship Diagram v0.5")
+
+Books>CreatorType;
+
+0 : Admin  
+1 : GenreEditor  
+2 : AuthorEditor  
+3 : PublisherEditor  
+4 : Publisher  
+5 : Author
