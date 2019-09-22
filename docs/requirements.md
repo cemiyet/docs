@@ -23,19 +23,44 @@
 
 ## Requirements
 
-| As a/an | I want to... | So that... | Notes | Priority | Status |
-|--|--|--|--|--|--|
-| 👻 **Guest** |   |   |   |   | TODO |
-|   |   |   |   |   |   |
-| 👤 **Member** |   |   |   |   | TODO |
-|   |   |   |   |   |   |
-| 👥 **Editor** |   |   |   |   | TODO |
-|   |   |   |   |   |   |
-| 👥 **Admin** |   |   |   |   | TODO |
-|   |   |   |   |   |   |
-| 👤 **Author** |   |   |   |   | TODO |
-|   |   |   |   |   |   |
-| 👥 **Publisher** |   |   |   |   | TODO |
-|   |   |   |   |   |   |
-| 👥 **Dealer** |   |   |   |   | TODO |
-|   |   |   |   |   | TODO |
+As a 👻 **Guest**:
+
+| I want to... | So that... | Notes | Priority | Status |
+|--|--|--|--|--|
+|   |   |   |   |   |
+
+As a 👤 **Member**:
+
+| I want to... | So that... | Notes | Priority | Status |
+|--|--|--|--|--|
+|   |   |   |   |   |
+
+As an 👤 **Author**:
+
+| I want to... | So that... | Notes | Priority | Status |
+|--|--|--|--|--|
+|   |   |   |   |   |
+
+As a 👥 **Publisher**:
+
+| I want to... | So that... | Notes | Priority | Status |
+|--|--|--|--|--|
+|   |   |   |   |   |
+
+As an 👥 **Editor**:
+
+| I want to... | So that... | Notes | Priority | Status |
+|--|--|--|--|--|
+|   |   |   |   |   |
+
+As an 👥 **Admin**:
+
+| I want to... | So that... | Notes | Priority | Status |
+|--|--|--|--|--|
+|   |   |   |   |   |
+
+As a 👥 **Dealer**:
+
+| I want to... | So that... | Notes | Priority | Status |
+|--|--|--|--|--|
+|   |   |   |   |   |
