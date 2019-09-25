@@ -1,6 +1,6 @@
 # Welcome to Cemiyet Docs
 
-**Status**: Writing user stories.
+**Status**: Working on REST API design.
 
 ## Glossary
 
