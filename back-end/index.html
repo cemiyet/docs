@@ -133,16 +133,74 @@
             <div class="section">
               
                 <h2 id="project-structure">Project Structure</h2>
+<hr />
 <h2 id="versioning">Versioning</h2>
+<hr />
 <h2 id="response-codes">Response Codes</h2>
+<hr />
 <h2 id="endpoint-naming-strategy">Endpoint Naming Strategy</h2>
+<p>REST URLs will follow this main structure;</p>
+<pre><code>/apiVersion/resource/:id/:subResource/:subResourceID
+</code></pre>
+<p>For example;</p>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>POST</th>
+<th>GET</th>
+<th>PUT</th>
+<th>DELETE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v1/users</td>
+<td>Creates new user.</td>
+<td>Returns user list.</td>
+<td>Method not allowed. (405)</td>
+<td>Method not allowed. (405)</td>
+</tr>
+<tr>
+<td>v1/books/1</td>
+<td>Method not allowed. (405)</td>
+<td>Returns book info.</td>
+<td>Updates book info.</td>
+<td>Removes book.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Filtering</strong></p>
+<p>For any filterable resource there will be filter query.</p>
+<p>For example;</p>
+<pre><code>GET v1/users?IsPublic=true
+</code></pre>
+<p>Will return only users with public profile.</p>
+<hr />
+<p><strong>Sorting</strong></p>
+<p>For any sortable resource there will be query for sorting.</p>
+<p>For example;</p>
+<pre><code>GET v1/books?sortDescending=PrintDate
+</code></pre>
+<p>Will return latest (30) printed books.</p>
+<hr />
+<p><strong>Paging</strong></p>
+<p>Default page size is 30 items. (This can be changed in the implementation.)</p>
+<p>Example;</p>
+<pre><code>GET v1/books?sortDescending=PrintDate&amp;page=2
+</code></pre>
+<p>Will return 2nd latest 30 books.</p>
+<hr />
+<p>Detailed URL list can be found in <a href="#endpoints">Endpoints</a> section.</p>
+<hr />
 <h2 id="authentication">Authentication</h2>
+<hr />
 <h2 id="authorization">Authorization</h2>
+<hr />
 <h2 id="database">Database</h2>
 <hr />
 <h2 id="endpoints">Endpoints</h2>
-<p><strong>Filtering</strong></p>
-<p><strong>Sorting</strong></p>
               
             </div>
           </div>
