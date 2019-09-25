@@ -22,7 +22,7 @@
 
 ## Entity-Relationship Diagram
 
-Status: Feature frozen until v0.6. New iteration will be held after *Ratings & Lists* update.
+Status: Feature frozen until v0.6. New iteration will be held after the *Ratings & Lists* update.
 
 ![Entity-Relationship Diagram v0.5](img/ERD.png "Entity-Relationship Diagram v0.5")
 

@@ -27,12 +27,15 @@ Below are fundamental requirements per actor.
 
 Their purpose is to create a reference material for features.
 
+Status: Feature frozen until v0.6. New iteration will be held after the *Ratings & Lists* update.
+
 ---
 
 As a 👻 **Guest**:
 
 | I want to... | Notes | Status |
 |--|--|--|
+| Sign-up with my username, date of birth, email and password. |   | TO DO |
 | Search a book by it's title. |   | TO DO |
 | Search an author by name. |   | TO DO |
 | Search a publisher by it's name.  |   | TO DO |
@@ -50,6 +53,7 @@ Same as <u>*Guest*</u>, plus;
 
 | I want to... | Notes | Status |
 |--|--|--|
+| Sign-in with my username/email and password. |   | TO DO |
 | Search a book by it's isbn/barcode. |   | TO DO |
 | Filter search results. |   | TO DO |
 | Create book lists. |   | TO DO |
