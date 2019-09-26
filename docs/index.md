@@ -9,5 +9,3 @@
 | ❓ | it's not accepted yet |
 | 💶 | potential income model |
 | 🆘 | help needed |
-| 🎞️ | back-end related |
-| 🖼️ | front-end related |
