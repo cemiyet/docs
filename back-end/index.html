@@ -133,6 +133,49 @@
             <div class="section">
               
                 <h2 id="project-structure">Project Structure</h2>
+<p>The main idea behind the project structure is the separation of concerns.</p>
+<p>Main principles to follow;</p>
+<ul>
+<li>Routers should be clean and version friendly. They call handlers from corresponding API version.</li>
+<li>Handlers are only responsible for specifying processing steps. They should not contain / depend any implementation details about database or models (if possible).</li>
+<li>Database operations should be abstract to the rest of the system except handlers. That way database changing costs could be minimal.</li>
+<li>Model related data structures should be separated.</li>
+</ul>
+<p>Folder structure:</p>
+<pre><code>├───config/
+├───handlers/
+│   ├───v1/
+│   │   ├───userHandler.go
+│   │   ├───bookHandler.go
+│   │   └───...
+│   ├───v2/
+│   │   ├───userHandler.go
+│   │   ├───bookHandler.go
+│   │   └───...
+│   └───...
+├───models/
+│   ├───user.go
+│   ├───book.go
+│   └───...
+├───routers/
+│   ├───v1.go
+│   ├───v2.go
+│   └───...
+├───services/
+│   ├───database.go
+│   ├───authentication.go
+│   └───...
+└───tests/
+    ├───v1/
+    │   ├───userHandler_test.go
+    │   ├───bookHandler_test.go
+    │   └───...
+    ├───v2/
+    │   ├───userHandler_test.go
+    │   ├───bookHandler_test.go
+    │   └───...
+    └───...
+</code></pre>
 <hr />
 <h2 id="versioning">Versioning</h2>
 <p>All URLs starts with API version prefix.</p>
