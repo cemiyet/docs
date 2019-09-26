@@ -12,7 +12,7 @@
 
 ## Endpoint Naming Strategy
 
-REST URLs will follow this main structure;
+Endpoints will follow this main structure;
 
     /apiVersion/resource/:id/:subResource/:subResourceID
 
@@ -61,7 +61,7 @@ Will return 2nd latest 30 books.
 
 ---
 
-Detailed URL list can be found in [Endpoints](#endpoints) section.
+Detailed endpoint list can be found in [Endpoints](#endpoints) section.
 
 ---
 
