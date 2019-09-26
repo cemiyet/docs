@@ -16,6 +16,21 @@ After v1.0 of the backend, API v1 will only get hotfixes. Any further features w
 
 ## Response Codes
 
+| Code | Use Cases |
+|--|--|
+| 200 OK | Response to a successful GET, PUT, PATCH or DELETE requests. |
+| 201 Created | Response to a successful POST request which results in a creation. |
+| 204 No Content | Response to a successful request which doesn't have body. |
+| 304 Not Modified ❓ | Useful when HTTP caching is present. (Not yet planned.) |
+| 400 Bad Request | Response to an unsuccessful request with bad data. |
+| 401 Unauthorized | Response to an unsuccessful request with invalid authentication. |
+| 403 Forbidden | Response to an unsuccessful request with valid authentication but with invalid authorization. |
+| 404 Not Found | Response to an unsuccessful request made to unknown endpoint. |
+| 405 Method Not Allowed | Response to an unsuccessful request which isn't allowed for authenticated user. |
+| 410 Gone | Response to an unsuccessful request made to endpoint that no longer available. |
+| 415 Unsupported Media Type | Response to an unsuccessful request with incorrect content type. |
+| 429 Too Many Requests ❓ | Useful when the request rejected due to rate limiting. (Not yet planned.) |
+
 ---
 
 ## Endpoint Naming Strategy
