@@ -26,10 +26,10 @@ Endpoints will follow this main structure;
 
 For example;
 
-| Resource | POST | GET | PUT | DELETE |
-|--|--|--|--|--|
-| v1/users | Creates new user. | Returns user list. | Method not allowed. (405) | Method not allowed. (405) |
-| v1/books/1 | Method not allowed. (405) | Returns book info. | Updates book info. | Removes book. |
+| Resource | POST | GET | PUT (replacing) | PATCH (partial update) | DELETE |
+|--|--|--|--|--|--|
+| v1/users | Creates new user. | Returns user list. | Method not allowed. (405) | Method not allowed. (405) | Method not allowed. (405) |
+| v1/books/1 | Method not allowed. (405) | Returns book info. | Replaces book info. | Updates book info. | Removes book. |
 
 ---
 
