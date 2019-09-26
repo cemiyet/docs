@@ -1,5 +1,14 @@
 ## Project Structure
 
+The main idea behind the project structure is the separation of concerns.
+
+Main principles to follow;
+
+- Routers should be clean and version friendly. They call handlers from corresponding API version.
+- Handlers are only responsible for specifying processing steps. They should not contain / depend any implementation details about database or models (if possible).
+- Database operations should be abstract to the rest of the system except handlers. That way database changing costs could be minimal.
+- Model related data structures should be separated.
+
 ---
 
 ## Versioning
