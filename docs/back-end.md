@@ -4,6 +4,14 @@
 
 ## Versioning
 
+All URLs starts with API version prefix.
+
+    GET v1/users
+
+Makes request to the users endpoint of the API v1.
+
+After v1.0 of the backend, API v1 will only get hotfixes. Any further features will be in the API v2.
+
 ---
 
 ## Response Codes
