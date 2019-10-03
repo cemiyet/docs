@@ -141,48 +141,9 @@
 <li>Database operations should be abstract to the rest of the system except handlers. That way database changing costs could be minimal.</li>
 <li>Model related data structures should be separated.</li>
 </ul>
-<p>Folder structure:</p>
-<pre><code>├───config/
-├───handlers/
-│   ├───v1/
-│   │   ├───userHandler.go
-│   │   ├───bookHandler.go
-│   │   └───...
-│   ├───v2/
-│   │   ├───userHandler.go
-│   │   ├───bookHandler.go
-│   │   └───...
-│   └───...
-├───models/
-│   ├───user.go
-│   ├───book.go
-│   └───...
-├───routers/
-│   ├───v1.go
-│   ├───v2.go
-│   └───...
-├───services/
-│   ├───database.go
-│   ├───authentication.go
-│   └───...
-└───tests/
-    ├───v1/
-    │   ├───userHandler_test.go
-    │   ├───bookHandler_test.go
-    │   └───...
-    ├───v2/
-    │   ├───userHandler_test.go
-    │   ├───bookHandler_test.go
-    │   └───...
-    └───...
-</code></pre>
 <hr />
 <h2 id="versioning">Versioning</h2>
-<p>All URLs starts with API version prefix.</p>
-<pre><code>GET v1/users
-</code></pre>
-<p>Makes request to the users endpoint of the API v1.</p>
-<p>After v1.0 of the backend, API v1 will only get hotfixes. Any further features will be in the API v2.</p>
+<p>Project will follow rolling release concept.</p>
 <hr />
 <h2 id="response-codes">Response Codes</h2>
 <table>
@@ -246,7 +207,7 @@
 <hr />
 <h2 id="endpoint-naming-strategy">Endpoint Naming Strategy</h2>
 <p>Endpoints will follow this main structure;</p>
-<pre><code>/apiVersion/resource/:id/:subResource/:subResourceID
+<pre><code>/resource/:id/:subResource/:subResourceID
 </code></pre>
 <p>For example;</p>
 <table>
@@ -262,7 +223,7 @@
 </thead>
 <tbody>
 <tr>
-<td>v1/users</td>
+<td>/users</td>
 <td>Creates new user.</td>
 <td>Returns user list.</td>
 <td>Method not allowed. (405)</td>
@@ -270,7 +231,7 @@
 <td>Method not allowed. (405)</td>
 </tr>
 <tr>
-<td>v1/books/1</td>
+<td>/books/1</td>
 <td>Method not allowed. (405)</td>
 <td>Returns book info.</td>
 <td>Replaces book info.</td>
@@ -283,21 +244,21 @@
 <p><strong>Filtering</strong></p>
 <p>For any filterable resource there will be filter query.</p>
 <p>For example;</p>
-<pre><code>GET v1/users?IsPublic=true
+<pre><code>GET /users?IsPublic=true
 </code></pre>
 <p>Will return only users with public profile.</p>
 <hr />
 <p><strong>Sorting</strong></p>
 <p>For any sortable resource there will be query for sorting.</p>
 <p>For example;</p>
-<pre><code>GET v1/books?sortDescending=PrintDate
+<pre><code>GET /books?sortDescending=PrintDate
 </code></pre>
 <p>Will return latest (30) printed books.</p>
 <hr />
 <p><strong>Paging</strong></p>
 <p>Default page size is 30 items. (This can be changed in the implementation.)</p>
 <p>Example;</p>
-<pre><code>GET v1/books?sortDescending=PrintDate&amp;page=2
+<pre><code>GET /books?sortDescending=PrintDate&amp;page=2
 </code></pre>
 <p>Will return 2nd latest 30 books.</p>
 <hr />
