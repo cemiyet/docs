@@ -13,49 +13,28 @@ Folder structure:
 
     ├───config/
     ├───handlers/
-    │   ├───v1/
-    │   │   ├───userHandler.go
-    │   │   ├───bookHandler.go
-    │   │   └───...
-    │   ├───v2/
-    │   │   ├───userHandler.go
-    │   │   ├───bookHandler.go
-    │   │   └───...
+    │   ├───user_handler.go
+    │   ├───book_handler.go
     │   └───...
     ├───models/
     │   ├───user.go
     │   ├───book.go
     │   └───...
-    ├───routers/
-    │   ├───v1.go
-    │   ├───v2.go
-    │   └───...
     ├───services/
+    │   ├───router.go
     │   ├───database.go
     │   ├───authentication.go
     │   └───...
-    └───tests/
-        ├───v1/
-        │   ├───userHandler_test.go
-        │   ├───bookHandler_test.go
-        │   └───...
-        ├───v2/
-        │   ├───userHandler_test.go
-        │   ├───bookHandler_test.go
-        │   └───...
-        └───...
+    ├───tests/
+    │   ├───user_handler_test.go
+    │   ├───book_handler_test.go
+    │   └───...
 
 ---
 
 ## Versioning
 
-All URLs starts with API version prefix.
-
-    GET v1/users
-
-Makes request to the users endpoint of the API v1.
-
-After v1.0 of the backend, API v1 will only get hotfixes. Any further features will be in the API v2.
+Project will follow rolling release concept.
 
 ---
 
@@ -82,14 +61,14 @@ After v1.0 of the backend, API v1 will only get hotfixes. Any further features w
 
 Endpoints will follow this main structure;
 
-    /apiVersion/resource/:id/:subResource/:subResourceID
+    /resource/:id/:subResource/:subResourceID
 
 For example;
 
 | Resource | POST | GET | PUT (replacing) | PATCH (partial update) | DELETE |
 |--|--|--|--|--|--|
-| v1/users | Creates new user. | Returns user list. | Method not allowed. (405) | Method not allowed. (405) | Method not allowed. (405) |
-| v1/books/1 | Method not allowed. (405) | Returns book info. | Replaces book info. | Updates book info. | Removes book. |
+| /users | Creates new user. | Returns user list. | Method not allowed. (405) | Method not allowed. (405) | Method not allowed. (405) |
+| /books/1 | Method not allowed. (405) | Returns book info. | Replaces book info. | Updates book info. | Removes book. |
 
 ---
 
@@ -99,7 +78,7 @@ For any filterable resource there will be filter query.
 
 For example;
 
-    GET v1/users?IsPublic=true
+    GET /users?IsPublic=true
 
 Will return only users with public profile.
 
@@ -111,7 +90,7 @@ For any sortable resource there will be query for sorting.
 
 For example;
 
-    GET v1/books?sortDescending=PrintDate
+    GET /books?sortDescending=PrintDate
 
 Will return latest (30) printed books.
 
@@ -123,7 +102,7 @@ Default page size is 30 items. (This can be changed in the implementation.)
 
 Example;
 
-    GET v1/books?sortDescending=PrintDate&page=2
+    GET /books?sortDescending=PrintDate&page=2
 
 Will return 2nd latest 30 books.
 
