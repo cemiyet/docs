@@ -9,27 +9,6 @@ Main principles to follow;
 - Database operations should be abstract to the rest of the system except handlers. That way database changing costs could be minimal.
 - Model related data structures should be separated.
 
-Folder structure:
-
-    ├───config/
-    ├───handlers/
-    │   ├───user_handler.go
-    │   ├───book_handler.go
-    │   └───...
-    ├───models/
-    │   ├───user.go
-    │   ├───book.go
-    │   └───...
-    ├───services/
-    │   ├───router.go
-    │   ├───database.go
-    │   ├───authentication.go
-    │   └───...
-    ├───tests/
-    │   ├───user_handler_test.go
-    │   ├───book_handler_test.go
-    │   └───...
-
 ---
 
 ## Versioning
