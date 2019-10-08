@@ -93,13 +93,25 @@ Detailed endpoint list can be found in [Endpoints](#endpoints) section.
 
 ## Authentication
 
+When the user successfully logs in using their credentials, a JSON Web Token will be returned.
+
+Then authenticated requests should feature Authorization header using the Bearer schema;
+
+    Authorization: Bearer <token>
+
 ---
 
 ## Authorization
 
+Main authorization model is role based using JWT claims until MVP.
+
+After MVP more complex authorization system should be a way to go.
+
 ---
 
 ## Database
+
+PostgreSQL 12 will be main choice until MVP.
 
 ---
 
