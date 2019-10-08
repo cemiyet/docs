@@ -265,10 +265,17 @@
 <p>Detailed endpoint list can be found in <a href="#endpoints">Endpoints</a> section.</p>
 <hr />
 <h2 id="authentication">Authentication</h2>
+<p>When the user successfully logs in using their credentials, a JSON Web Token will be returned.</p>
+<p>Then authenticated requests should feature Authorization header using the Bearer schema;</p>
+<pre><code>Authorization: Bearer &lt;token&gt;
+</code></pre>
 <hr />
 <h2 id="authorization">Authorization</h2>
+<p>Main authorization model is role based using JWT claims until MVP.</p>
+<p>After MVP more complex authorization system should be a way to go.</p>
 <hr />
 <h2 id="database">Database</h2>
+<p>PostgreSQL 12 will be main choice until MVP.</p>
 <hr />
 <h2 id="endpoints">Endpoints</h2>
               
