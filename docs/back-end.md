@@ -4,10 +4,20 @@ The main idea behind the project structure is the separation of concerns.
 
 Main principles to follow;
 
-- Routers should be clean and version friendly. They call handlers from corresponding API version.
-- Handlers are only responsible for specifying processing steps. They should not contain / depend any implementation details about database or models (if possible).
-- Database operations should be abstract to the rest of the system except handlers. That way database changing costs could be minimal.
+- API controllers are only responsible for specifying processing steps. They should not contain or depend any implementation details about database or models.
+- Database-related operations should be abstracted from the rest of the system. That way database changing costs could be minimal.
 - Model related data structures should be separated.
+
+With these principles in mind there will be 4 seperate projects;
+
+| Project | Contents | References |
+|--|--|--|
+| Core [Class Library] | Models, Exceptions, Interfaces, Services |  |
+| Persistance [Class Library] | Database-related operations | Domain |
+| Application [Class Library] | Application logic | Domain & Persistance |
+| API [Web API Project] | API Controllers (Get request and return response) | Application |
+
+add corresponding testing projects. In the future there would be infrastructure project for external services like notification, stmp etc.
 
 ---
 
