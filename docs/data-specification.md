@@ -26,11 +26,17 @@ Status: Feature frozen until v0.6. New iteration will be held after the *Ratings
 
 ![Entity-Relationship Diagram v0.5](img/ERD.png "Entity-Relationship Diagram v0.5")
 
-Books>CreatorType;
+**CreatorType**;
 
-0 : Admin  
-1 : GenreEditor  
-2 : AuthorEditor  
-3 : PublisherEditor  
-4 : Publisher  
-5 : Author
+0 : admin  
+1 : genre_editor  
+2 : author_editor  
+3 : publisher_editor  
+4 : publisher  
+5 : author
+
+**UsersBooksStatusType**;
+
+0 : want_to_read  
+1 : reading  
+2 : read  
