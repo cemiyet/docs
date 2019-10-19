@@ -67,21 +67,9 @@ For any filterable resource there will be filter query.
 
 For example;
 
-    GET /users?IsPublic=true
+    GET /users?is_public=true
 
 Will return only users with public profile.
-
----
-
-**Sorting**
-
-For any sortable resource there will be query for sorting.
-
-For example;
-
-    GET /books?sortDescending=PrintDate
-
-Will return latest (30) printed books.
 
 ---
 
@@ -126,3 +114,112 @@ PostgreSQL 12 will be main choice until MVP.
 ---
 
 ## Endpoints
+
+This section will be replaced eventually by API documentation.
+
+**Dimensions**
+
+dimension_id : uuid  
+page : int  
+dimension_ids: uuid array
+
+| Method | Endpoint |
+|--|--|
+| POST | /dimensions |
+| GET | /dimensions |
+| GET | /dimensions?page={{page}} |
+| GET | /dimensions/{{dimension_id}} |
+| PUT | /dimensions/{{dimension_id}} |
+| PATCH | /dimensions/{{dimension_id}} |
+| DELETE | /dimensions/{{dimension_id}} |
+| DELETE | /dimensions/{{dimension_ids}} |
+
+**Genres**
+
+genre_id : uuid  
+page : int  
+genre_ids: uuid array
+
+| Method | Endpoint |
+|--|--|
+| POST | /genres |
+| GET | /genres |
+| GET | /genres?page={{page}} |
+| GET | /genres/{{genre_id}} |
+| PUT | /genres/{{genre_id}} |
+| PATCH | /genres/{{genre_id}} |
+| DELETE | /genres/{{genre_id}} |
+| DELETE | /genres/{{genre_ids}} |
+
+**Authors**
+
+author_id : uuid  
+page : int  
+author_ids: uuid array
+
+| Method | Endpoint |
+|--|--|
+| POST | /authors |
+| GET | /authors |
+| GET | /authors?page={{page}} |
+| GET | /authors/{{author_id}} |
+| PUT | /authors/{{author_id}} |
+| PATCH | /authors/{{author_id}} |
+| DELETE | /authors/{{author_id}} |
+| DELETE | /authors/{{author_ids}} |
+
+**Publishers**
+
+publisher_id : uuid  
+page : int  
+publisher_ids: uuid array
+
+| Method | Endpoint |
+|--|--|
+| POST | /publishers |
+| GET | /publishers |
+| GET | /publishers?page={{page}} |
+| GET | /publishers/{{publisher_id}} |
+| PUT | /publishers/{{publisher_id}} |
+| PATCH | /publishers/{{publisher_id}} |
+| DELETE | /publishers/{{publisher_id}} |
+| DELETE | /publishers/{{publisher_ids}} |
+
+**EditorsPublishers**
+
+publisher_id : uuid  
+editor_id : uuid (user id)  
+editor_ids: uuid array (user ids)  
+
+| Method | Endpoint |
+|--|--|
+| POST | /publishers/{{publisher_id}}/editors |
+| GET | /publishers/{{publisher_id}}/editors |
+| DELETE | /publishers/{{publisher_id}}/editors/{{editor_id}} |
+| DELETE | /publishers/{{publisher_id}}/editors/{{editor_ids}} |
+
+**EditorsAuthors**
+
+author_id : uuid  
+editor_id : uuid (user id)  
+editor_ids: uuid array (user ids)  
+
+| Method | Endpoint |
+|--|--|
+| POST | /authors/{{author_id}}/editors |
+| GET | /authors/{{author_id}}/editors |
+| DELETE | /authors/{{author_id}}/editors/{{editor_id}} |
+| DELETE | /authors/{{author_id}}/editors/{{editor_ids}} |
+
+**EditorsGenres**
+
+genre_id : uuid  
+editor_id : uuid (user id)  
+editor_ids: uuid array (user ids)  
+
+| Method | Endpoint |
+|--|--|
+| POST | /genres/{{genre_id}}/editors |
+| GET | /genres/{{genre_id}}/editors |
+| DELETE | /genres/{{genre_id}}/editors/{{editor_id}} |
+| DELETE | /genres/{{genre_id}}/editors/{{editor_ids}} |
