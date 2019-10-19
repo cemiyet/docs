@@ -276,16 +276,9 @@
 <p><strong>Filtering</strong></p>
 <p>For any filterable resource there will be filter query.</p>
 <p>For example;</p>
-<pre><code>GET /users?IsPublic=true
+<pre><code>GET /users?is_public=true
 </code></pre>
 <p>Will return only users with public profile.</p>
-<hr />
-<p><strong>Sorting</strong></p>
-<p>For any sortable resource there will be query for sorting.</p>
-<p>For example;</p>
-<pre><code>GET /books?sortDescending=PrintDate
-</code></pre>
-<p>Will return latest (30) printed books.</p>
 <hr />
 <p><strong>Paging</strong></p>
 <p>Default page size is 30 items. (This can be changed in the implementation.)</p>
@@ -310,6 +303,281 @@
 <p>PostgreSQL 12 will be main choice until MVP.</p>
 <hr />
 <h2 id="endpoints">Endpoints</h2>
+<p>This section will be replaced eventually by API documentation.</p>
+<p><strong>Dimensions</strong></p>
+<p>dimension_id : uuid<br />
+page : int<br />
+dimension_ids: uuid array</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Endpoint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POST</td>
+<td>/dimensions</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/dimensions</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/dimensions?page={{page}}</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/dimensions/{{dimension_id}}</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>/dimensions/{{dimension_id}}</td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td>/dimensions/{{dimension_id}}</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>/dimensions/{{dimension_id}}</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>/dimensions/{{dimension_ids}}</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Genres</strong></p>
+<p>genre_id : uuid<br />
+page : int<br />
+genre_ids: uuid array</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Endpoint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POST</td>
+<td>/genres</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/genres</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/genres?page={{page}}</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/genres/{{genre_id}}</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>/genres/{{genre_id}}</td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td>/genres/{{genre_id}}</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>/genres/{{genre_id}}</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>/genres/{{genre_ids}}</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Authors</strong></p>
+<p>author_id : uuid<br />
+page : int<br />
+author_ids: uuid array</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Endpoint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POST</td>
+<td>/authors</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/authors</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/authors?page={{page}}</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/authors/{{author_id}}</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>/authors/{{author_id}}</td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td>/authors/{{author_id}}</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>/authors/{{author_id}}</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>/authors/{{author_ids}}</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Publishers</strong></p>
+<p>publisher_id : uuid<br />
+page : int<br />
+publisher_ids: uuid array</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Endpoint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POST</td>
+<td>/publishers</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/publishers</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/publishers?page={{page}}</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/publishers/{{publisher_id}}</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>/publishers/{{publisher_id}}</td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td>/publishers/{{publisher_id}}</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>/publishers/{{publisher_id}}</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>/publishers/{{publisher_ids}}</td>
+</tr>
+</tbody>
+</table>
+<p><strong>EditorsPublishers</strong></p>
+<p>publisher_id : uuid<br />
+editor_id : uuid (user id)<br />
+editor_ids: uuid array (user ids)  </p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Endpoint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POST</td>
+<td>/publishers/{{publisher_id}}/editors</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/publishers/{{publisher_id}}/editors</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>/publishers/{{publisher_id}}/editors/{{editor_id}}</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>/publishers/{{publisher_id}}/editors/{{editor_ids}}</td>
+</tr>
+</tbody>
+</table>
+<p><strong>EditorsAuthors</strong></p>
+<p>author_id : uuid<br />
+editor_id : uuid (user id)<br />
+editor_ids: uuid array (user ids)  </p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Endpoint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POST</td>
+<td>/authors/{{author_id}}/editors</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/authors/{{author_id}}/editors</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>/authors/{{author_id}}/editors/{{editor_id}}</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>/authors/{{author_id}}/editors/{{editor_ids}}</td>
+</tr>
+</tbody>
+</table>
+<p><strong>EditorsGenres</strong></p>
+<p>genre_id : uuid<br />
+editor_id : uuid (user id)<br />
+editor_ids: uuid array (user ids)  </p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Endpoint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POST</td>
+<td>/genres/{{genre_id}}/editors</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/genres/{{genre_id}}/editors</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>/genres/{{genre_id}}/editors/{{editor_id}}</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>/genres/{{genre_id}}/editors/{{editor_ids}}</td>
+</tr>
+</tbody>
+</table>
               
             </div>
           </div>
