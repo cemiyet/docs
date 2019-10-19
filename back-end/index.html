@@ -136,11 +136,11 @@
 <p>The main idea behind the project structure is the separation of concerns.</p>
 <p>Main principles to follow;</p>
 <ul>
-<li>API controllers / route handlers are only responsible for specifying processing steps. They should not contain or depend any implementation details about database or models.</li>
+<li>API controllers are only responsible for specifying processing steps. They should not contain or depend any implementation details about database or models.</li>
 <li>Database-related operations should be abstracted from the rest of the system. That way database changing costs could be minimal.</li>
 <li>Model related data structures should be separated.</li>
 </ul>
-<p>With these principles in mind there will be 8 seperate projects;</p>
+<p>With these principles in mind there will be 4 seperate projects;</p>
 <table>
 <thead>
 <tr>
@@ -167,15 +167,12 @@
 </tr>
 <tr>
 <td>API [Web API Project]</td>
-<td>API Controllers</td>
+<td>API Controllers (Get request and return response)</td>
 <td>Application</td>
 </tr>
 </tbody>
 </table>
-<p>| Core.Tests |  |  |
-| Persistance.Tests |  |  |
-| Application.Tests |  |  |
-| API.Tests |  |  |</p>
+<p>add corresponding testing projects. In the future there would be infrastructure project for external services like notification, stmp etc.</p>
 <hr />
 <h2 id="versioning">Versioning</h2>
 <p>Project will follow rolling release concept.</p>
