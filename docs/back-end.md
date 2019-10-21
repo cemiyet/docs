@@ -117,6 +117,8 @@ PostgreSQL 12 will be main choice until MVP.
 
 This section will be replaced eventually by API documentation.
 
+Cemiyet and event related endpoints will be added prior to their update.
+
 **Dimensions**
 
 dimension_id: uuid  
@@ -244,6 +246,166 @@ book_ids: uuid array
 | DELETE | /series/{{serie_id}}/books/{{book_id}} |
 | DELETE | /series/{{serie_id}}/books?book_ids={{book_ids}} |
 
+**Users**
+
+user_id: uuid  
+page: int  
+user_ids: uuid array  
+
+| Method | Endpoint |
+|--|--|
+| POST | /register |
+| POST | /login |
+| POST | /logout |
+| POST | /users |
+| GET | /users |
+| GET | /users?page={{page}} |
+| GET | /users/{{user_id}} |
+| PUT | /users/{{user_id}} |
+| PATCH | /users/{{user_id}} |
+| DELETE | /users/{{user_id}} |
+| DELETE | /users?user_ids={{user_ids}} |
+| GET | /me |
+| PUT | /me |
+| PATCH | /me |
+| DELETE | /me |
+
+**UsersBooks**
+
+user_id: uuid  
+page: int  
+book_isbn: char(13)  
+book_isbns: char(13) array
+
+| Method | Endpoint |
+|--|--|
+| POST | /me/books |
+| GET | /me/books |
+| GET | /me/books?page={{page}} |
+| PUT | /me/books |
+| DELETE | /me/books/{{book_isbn}} |
+| DELETE | /me/books?book_isbns={{book_isbns}} |
+| POST | /users/{{user_id}}/books |
+| GET | /users/{{user_id}}/books |
+| GET | /users/{{user_id}}/books?page={{page}} |
+| PUT | /users/{{user_id}}/books |
+| DELETE | /users/{{user_id}}/books/{{book_isbn}} |
+| DELETE | /users/{{user_id}}/books?book_isbns={{book_isbns}} |
+
+**UsersBooksTags**
+
+user_id: uuid  
+page: int  
+book_id: char(13)  
+tag_ids: char(13) array
+
+| Method | Endpoint |
+|--|--|
+| POST | /me/books/{{book_id}}/tags |
+| GET | /me/books/{{book_id}}/tags |
+| PUT | /me/books/{{book_id}}/tags |
+| DELETE | /me/books/{{book_id}}/tags |
+| DELETE | /me/books/{{book_id}}/tags?tag_ids={{tag_ids}} |
+| POST | /users/{{user_id}}/books/{{book_id}}/tags |
+| GET | /users/{{user_id}}/books/{{book_id}}/tags |
+| PUT | /users/{{user_id}}/books/{{book_id}}/tags |
+| DELETE | /users/{{user_id}}/books/{{book_id}}/tags |
+| DELETE | /users/{{user_id}}/books/{{book_id}}/tags?tag_ids={{tag_ids}} |
+
+**UsersLists**
+
+user_id: uuid  
+page: int  
+list_id: uuid  
+list_ids: uuid array
+
+| Method | Endpoint |
+|--|--|
+| POST | /me/lists |
+| GET | /me/lists |
+| GET | /me/lists?page={{page}} |
+| GET | /me/lists/{{list_id}} |
+| PUT | /me/lists/{{list_id}} |
+| DELETE | /me/lists/{{list_id}} |
+| DELETE | /me/lists?list_ids={{list_ids}} |
+| POST | /users/{{user_id}}/lists |
+| GET | /users/{{user_id}}/lists |
+| GET | /users/{{user_id}}/lists?page={{page}} |
+| GET | /users/{{user_id}}/lists/{{list_id}} |
+| PUT | /users/{{user_id}}/lists/{{list_id}} |
+| DELETE | /users/{{user_id}}/lists/{{list_id}} |
+| DELETE | /users/{{user_id}}/lists?list_ids={{list_ids}} |
+
+**UsersListsBooks**
+
+user_id: uuid  
+page: int  
+list_id: uuid  
+book_isbn: char(13)  
+book_isbns: char(13) array
+
+| Method | Endpoint |
+|--|--|
+| POST | /me/lists/{{list_id}}/books |
+| GET | /me/lists/{{list_id}}/books |
+| GET | /me/lists/{{list_id}}/books?page={{page}} |
+| GET | /me/lists/{{list_id}}/books/{{book_isbn}} |
+| DELETE | /me/lists/{{list_id}}/books/{{book_isbn}} |
+| DELETE | /me/lists/{{list_id}}/books?book_isbns={{book_isbns}} |
+| POST | /users/{{user_id}}/lists/{{list_id}}/books |
+| GET | /users/{{user_id}}/lists/{{list_id}}/books |
+| GET | /users/{{user_id}}/lists/{{list_id}}/books?page={{page}} |
+| GET | /users/{{user_id}}/lists/{{list_id}}/books/{{book_isbn}} |
+| DELETE | /users/{{user_id}}/lists/{{list_id}}/books/{{book_isbn}} |
+| DELETE | /users/{{user_id}}/lists/{{list_id}}/books?book_isbns={{book_isbns}} |
+
+**UsersTags**
+
+user_id: uuid  
+page: int  
+tag_id: uuid  
+tag_ids: uuid array
+
+| Method | Endpoint |
+|--|--|
+| POST | /me/tags |
+| GET | /me/tags |
+| GET | /me/tags?page={{page}} |
+| GET | /me/tags/{{tag_id}} |
+| PUT | /me/tags/{{tag_id}} |
+| DELETE | /me/tags/{{tag_id}} |
+| DELETE | /me/tags?tag_ids={{tag_ids}} |
+| POST | /users/{{user_id}}/tags |
+| GET | /users/{{user_id}}/tags |
+| GET | /users/{{user_id}}/tags?page={{page}} |
+| GET | /users/{{user_id}}/tags/{{tag_id}} |
+| PUT | /users/{{user_id}}/tags/{{tag_id}} |
+| DELETE | /users/{{user_id}}/tags/{{tag_id}} |
+| DELETE | /users/{{user_id}}/tags?tag_ids={{tag_ids}} |
+
+**UsersTagsBooks**
+
+user_id: uuid  
+page: int  
+tag_id: uuid  
+book_id: char(13)  
+book_ids: char(13) array
+
+| Method | Endpoint |
+|--|--|
+| POST | /me/tags/{{tag_id}}/books |
+| GET | /me/tags/{{tag_id}}/books |
+| GET | /me/tags/{{tag_id}}/books?page={{page}} |
+| GET | /me/tags/{{tag_id}}/books/{{book_id}} |
+| DELETE | /me/tags/{{tag_id}}/books/{{book_id}} |
+| DELETE | /me/tags/{{tag_id}}/books?book_ids={{book_ids}} |
+| POST | /users/{{user_id}}/tags/{{tag_id}}/books |
+| GET | /users/{{user_id}}/tags/{{tag_id}}/books |
+| GET | /users/{{user_id}}/tags/{{tag_id}}/books?page={{page}} |
+| GET | /users/{{user_id}}/tags/{{tag_id}}/books/{{book_id}} |
+| DELETE | /users/{{user_id}}/tags/{{tag_id}}/books/{{book_id}} |
+| DELETE | /users/{{user_id}}/tags/{{tag_id}}/books?book_ids={{book_ids}} |
+
 **EditorsPublishers**
 
 publisher_id: uuid  
@@ -274,7 +436,7 @@ editor_ids: uuid array (user ids)
 
 genre_id : uuid  
 editor_id : uuid (user id)  
-editor_ids: uuid array (user ids)  
+editor_ids: uuid array (user ids)
 
 | Method | Endpoint |
 |--|--|
