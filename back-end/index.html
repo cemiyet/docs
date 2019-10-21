@@ -140,7 +140,7 @@
 <li>Database-related operations should be abstracted from the rest of the system. That way database changing costs could be minimal.</li>
 <li>Model related data structures should be separated.</li>
 </ul>
-<p>With these principles in mind there will be 4 seperate projects;</p>
+<p>With these principles in mind there will be 6 seperate projects;</p>
 <table>
 <thead>
 <tr>
@@ -152,27 +152,36 @@
 <tbody>
 <tr>
 <td>Core [Class Library]</td>
-<td>Models, Exceptions, Interfaces, Services</td>
-<td></td>
+<td>Models, Exceptions, Interfaces</td>
+<td>-</td>
 </tr>
 <tr>
 <td>Persistance [Class Library]</td>
-<td>Database-related operations</td>
+<td>Database-related operations for both api and external services</td>
 <td>Domain</td>
+</tr>
+<tr>
+<td>Infastructure [Class Library]</td>
+<td>External services (like notification, stmp, logging etc.)</td>
+<td>Domain, Persistance</td>
 </tr>
 <tr>
 <td>Application [Class Library]</td>
 <td>Application logic</td>
-<td>Domain &amp; Persistance</td>
+<td>Domain, Persistance, Infastructure</td>
 </tr>
 <tr>
-<td>API [Web API Project]</td>
-<td>API Controllers (Get request and return response)</td>
+<td>Api [Web Api Project]</td>
+<td>Controllers (get request and return response)</td>
 <td>Application</td>
+</tr>
+<tr>
+<td>Tests [Class Library]</td>
+<td>Unit tests, integration tests etc.</td>
+<td>Api</td>
 </tr>
 </tbody>
 </table>
-<p>add corresponding testing projects. In the future there would be infrastructure project for external services like notification, stmp etc.</p>
 <hr />
 <h2 id="versioning">Versioning</h2>
 <p>Project will follow rolling release concept.</p>
