@@ -314,8 +314,8 @@
 <h2 id="endpoints">Endpoints</h2>
 <p>This section will be replaced eventually by API documentation.</p>
 <p><strong>Dimensions</strong></p>
-<p>dimension_id : uuid<br />
-page : int<br />
+<p>dimension_id: uuid<br />
+page: int<br />
 dimension_ids: uuid array</p>
 <table>
 <thead>
@@ -355,13 +355,13 @@ dimension_ids: uuid array</p>
 </tr>
 <tr>
 <td>DELETE</td>
-<td>/dimensions/{{dimension_ids}}</td>
+<td>/dimensions?dimension_ids={{dimension_ids}}</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Genres</strong></p>
-<p>genre_id : uuid<br />
-page : int<br />
+<p>genre_id: uuid<br />
+page: int<br />
 genre_ids: uuid array</p>
 <table>
 <thead>
@@ -401,13 +401,21 @@ genre_ids: uuid array</p>
 </tr>
 <tr>
 <td>DELETE</td>
-<td>/genres/{{genre_ids}}</td>
+<td>/genres?genre_ids={{genre_ids}}</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/genres/{{genre_id}}/books</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/genres/{{genre_id}}/books?page={{page}}</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Authors</strong></p>
-<p>author_id : uuid<br />
-page : int<br />
+<p>author_id: uuid<br />
+page: int<br />
 author_ids: uuid array</p>
 <table>
 <thead>
@@ -447,13 +455,29 @@ author_ids: uuid array</p>
 </tr>
 <tr>
 <td>DELETE</td>
-<td>/authors/{{author_ids}}</td>
+<td>/authors?author_ids={{author_ids}}</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/authors/{{author_id}}/books</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/authors/{{author_id}}/books?page={{page}}</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/authors/{{author_id}}/series</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/authors/{{author_id}}/series?page={{page}}</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Publishers</strong></p>
-<p>publisher_id : uuid<br />
-page : int<br />
+<p>publisher_id: uuid<br />
+page: int<br />
 publisher_ids: uuid array</p>
 <table>
 <thead>
@@ -493,14 +517,173 @@ publisher_ids: uuid array</p>
 </tr>
 <tr>
 <td>DELETE</td>
-<td>/publishers/{{publisher_ids}}</td>
+<td>/publishers?publisher_ids={{publisher_ids}}</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/publishers/{{publisher_id}}/books</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/publishers/{{publisher_id}}/books?page={{page}}</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Books</strong></p>
+<p>book_id: uuid<br />
+page: int<br />
+book_isbn: char(13)<br />
+book_ids: uuid array<br />
+book_isbns: char(13) array</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Endpoint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POST</td>
+<td>/books</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/books</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/books?page={{page}}</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/books/{{book_id}}</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>/books/{{book_id}}</td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td>/books/{{book_id}}</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>/books/{{book_id}}</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>/books?book_ids={{book_ids}}</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/books/{{book_id}}/editions</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/books/{{book_id}}/editions</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/books/{{book_id}}/editions?page={{page}}</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/books/{{book_id}}/editions/{{book_isbn}}</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>/books/{{book_id}}/editions/{{book_isbn}}</td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td>/books/{{book_id}}/editions/{{book_isbn}}</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>/books/{{book_id}}/editions/{{book_isbn}}</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>/books/{{book_id}}/editions?book_isbns={{book_isbns}}</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Series</strong></p>
+<p>serie_id: uuid<br />
+page: int<br />
+book_id: uuid<br />
+book_ids: uuid array</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Endpoint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POST</td>
+<td>/series</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/series</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/series?page={{page}}</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/series/{{serie_id}}</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>/series/{{serie_id}}</td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td>/series/{{serie_id}}</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>/series/{{serie_id}}</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>/series?serie_ids={{serie_ids}}</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/series/{{serie_id}}/books</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/series/{{serie_id}}/books</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/series/{{serie_id}}/books?page={{page}}</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/series/{{serie_id}}/books/{{book_id}}</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>/series/{{serie_id}}/books/{{book_id}}</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>/series/{{serie_id}}/books?book_ids={{book_ids}}</td>
 </tr>
 </tbody>
 </table>
 <p><strong>EditorsPublishers</strong></p>
-<p>publisher_id : uuid<br />
-editor_id : uuid (user id)<br />
-editor_ids: uuid array (user ids)  </p>
+<p>publisher_id: uuid<br />
+editor_id: uuid (user id)<br />
+editor_ids: uuid array (user ids)</p>
 <table>
 <thead>
 <tr>
@@ -523,14 +706,14 @@ editor_ids: uuid array (user ids)  </p>
 </tr>
 <tr>
 <td>DELETE</td>
-<td>/publishers/{{publisher_id}}/editors/{{editor_ids}}</td>
+<td>/publishers/{{publisher_id}}/editors?editor_ids={{editor_ids}}</td>
 </tr>
 </tbody>
 </table>
 <p><strong>EditorsAuthors</strong></p>
 <p>author_id : uuid<br />
 editor_id : uuid (user id)<br />
-editor_ids: uuid array (user ids)  </p>
+editor_ids: uuid array (user ids)</p>
 <table>
 <thead>
 <tr>
@@ -553,7 +736,7 @@ editor_ids: uuid array (user ids)  </p>
 </tr>
 <tr>
 <td>DELETE</td>
-<td>/authors/{{author_id}}/editors/{{editor_ids}}</td>
+<td>/authors/{{author_id}}/editors?editor_ids={{editor_ids}}</td>
 </tr>
 </tbody>
 </table>
@@ -583,7 +766,7 @@ editor_ids: uuid array (user ids)  </p>
 </tr>
 <tr>
 <td>DELETE</td>
-<td>/genres/{{genre_id}}/editors/{{editor_ids}}</td>
+<td>/genres/{{genre_id}}/editors?editor_ids={{editor_ids}}</td>
 </tr>
 </tbody>
 </table>
