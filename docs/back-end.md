@@ -8,16 +8,16 @@ Main principles to follow;
 - Database-related operations should be abstracted from the rest of the system. That way database changing costs could be minimal.
 - Model related data structures should be separated.
 
-With these principles in mind there will be 4 seperate projects;
+With these principles in mind there will be 6 seperate projects;
 
 | Project | Contents | References |
 |--|--|--|
-| Core [Class Library] | Models, Exceptions, Interfaces, Services |  |
-| Persistance [Class Library] | Database-related operations | Domain |
-| Application [Class Library] | Application logic | Domain & Persistance |
-| API [Web API Project] | API Controllers (Get request and return response) | Application |
-
-add corresponding testing projects. In the future there would be infrastructure project for external services like notification, stmp etc.
+| Core [Class Library] | Models, Exceptions, Interfaces | - |
+| Persistance [Class Library] | Database-related operations for both api and external services | Domain |
+| Infastructure [Class Library] | External services (like notification, stmp, logging etc.) | Domain, Persistance |
+| Application [Class Library] | Application logic | Domain, Persistance, Infastructure |
+| Api [Web Api Project] | Controllers (get request and return response) | Application |
+| Tests [Class Library] | Unit tests, integration tests etc. | Api |
 
 ---
 
