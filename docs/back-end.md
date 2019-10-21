@@ -119,8 +119,8 @@ This section will be replaced eventually by API documentation.
 
 **Dimensions**
 
-dimension_id : uuid  
-page : int  
+dimension_id: uuid  
+page: int  
 dimension_ids: uuid array
 
 | Method | Endpoint |
@@ -132,12 +132,12 @@ dimension_ids: uuid array
 | PUT | /dimensions/{{dimension_id}} |
 | PATCH | /dimensions/{{dimension_id}} |
 | DELETE | /dimensions/{{dimension_id}} |
-| DELETE | /dimensions/{{dimension_ids}} |
+| DELETE | /dimensions?dimension_ids={{dimension_ids}} |
 
 **Genres**
 
-genre_id : uuid  
-page : int  
+genre_id: uuid  
+page: int  
 genre_ids: uuid array
 
 | Method | Endpoint |
@@ -149,12 +149,14 @@ genre_ids: uuid array
 | PUT | /genres/{{genre_id}} |
 | PATCH | /genres/{{genre_id}} |
 | DELETE | /genres/{{genre_id}} |
-| DELETE | /genres/{{genre_ids}} |
+| DELETE | /genres?genre_ids={{genre_ids}} |
+| GET | /genres/{{genre_id}}/books |
+| GET | /genres/{{genre_id}}/books?page={{page}} |
 
 **Authors**
 
-author_id : uuid  
-page : int  
+author_id: uuid  
+page: int  
 author_ids: uuid array
 
 | Method | Endpoint |
@@ -166,12 +168,14 @@ author_ids: uuid array
 | PUT | /authors/{{author_id}} |
 | PATCH | /authors/{{author_id}} |
 | DELETE | /authors/{{author_id}} |
-| DELETE | /authors/{{author_ids}} |
+| DELETE | /authors?author_ids={{author_ids}} |
+| GET | /authors/{{author_id}}/books |
+| GET | /authors/{{author_id}}/books?page={{page}} |
 
 **Publishers**
 
-publisher_id : uuid  
-page : int  
+publisher_id: uuid  
+page: int  
 publisher_ids: uuid array
 
 | Method | Endpoint |
@@ -183,12 +187,41 @@ publisher_ids: uuid array
 | PUT | /publishers/{{publisher_id}} |
 | PATCH | /publishers/{{publisher_id}} |
 | DELETE | /publishers/{{publisher_id}} |
-| DELETE | /publishers/{{publisher_ids}} |
+| DELETE | /publishers?publisher_ids={{publisher_ids}} |
+| GET | /publishers/{{publisher_id}}/books |
+| GET | /publishers/{{publisher_id}}/books?page={{page}} |
+
+**Books**
+
+book_id: uuid  
+page: int  
+book_isbn: char(13)  
+book_ids: uuid array  
+book_isbns: char(13) array
+
+| Method | Endpoint |
+|--|--|
+| POST | /books |
+| GET | /books |
+| GET | /books?page={{page}} |
+| GET | /books/{{book_id}} |
+| PUT | /books/{{book_id}} |
+| PATCH | /books/{{book_id}} |
+| DELETE | /books/{{book_id}} |
+| DELETE | /books?book_ids={{book_ids}} |
+| POST | /books/{{book_id}}/editions |
+| GET | /books/{{book_id}}/editions |
+| GET | /books/{{book_id}}/editions?page={{page}} |
+| GET | /books/{{book_id}}/editions/{{book_isbn}} |
+| PUT | /books/{{book_id}}/editions/{{book_isbn}} |
+| PATCH | /books/{{book_id}}/editions/{{book_isbn}} |
+| DELETE | /books/{{book_id}}/editions/{{book_isbn}} |
+| DELETE | /books/{{book_id}}/editions?book_isbns={{book_isbns}} |
 
 **EditorsPublishers**
 
-publisher_id : uuid  
-editor_id : uuid (user id)  
+publisher_id: uuid  
+editor_id: uuid (user id)  
 editor_ids: uuid array (user ids)  
 
 | Method | Endpoint |
@@ -196,7 +229,7 @@ editor_ids: uuid array (user ids)
 | POST | /publishers/{{publisher_id}}/editors |
 | GET | /publishers/{{publisher_id}}/editors |
 | DELETE | /publishers/{{publisher_id}}/editors/{{editor_id}} |
-| DELETE | /publishers/{{publisher_id}}/editors/{{editor_ids}} |
+| DELETE | /publishers/{{publisher_id}}/editors?editor_ids={{editor_ids}} |
 
 **EditorsAuthors**
 
@@ -209,7 +242,7 @@ editor_ids: uuid array (user ids)
 | POST | /authors/{{author_id}}/editors |
 | GET | /authors/{{author_id}}/editors |
 | DELETE | /authors/{{author_id}}/editors/{{editor_id}} |
-| DELETE | /authors/{{author_id}}/editors/{{editor_ids}} |
+| DELETE | /authors/{{author_id}}/editors?editor_ids={{editor_ids}} |
 
 **EditorsGenres**
 
@@ -222,4 +255,4 @@ editor_ids: uuid array (user ids)
 | POST | /genres/{{genre_id}}/editors |
 | GET | /genres/{{genre_id}}/editors |
 | DELETE | /genres/{{genre_id}}/editors/{{editor_id}} |
-| DELETE | /genres/{{genre_id}}/editors/{{editor_ids}} |
+| DELETE | /genres/{{genre_id}}/editors?editor_ids={{editor_ids}} |
