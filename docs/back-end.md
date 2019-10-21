@@ -171,6 +171,8 @@ author_ids: uuid array
 | DELETE | /authors?author_ids={{author_ids}} |
 | GET | /authors/{{author_id}}/books |
 | GET | /authors/{{author_id}}/books?page={{page}} |
+| GET | /authors/{{author_id}}/series |
+| GET | /authors/{{author_id}}/series?page={{page}} |
 
 **Publishers**
 
@@ -218,11 +220,35 @@ book_isbns: char(13) array
 | DELETE | /books/{{book_id}}/editions/{{book_isbn}} |
 | DELETE | /books/{{book_id}}/editions?book_isbns={{book_isbns}} |
 
+**Series**
+
+serie_id: uuid  
+page: int  
+book_id: uuid  
+book_ids: uuid array
+
+| Method | Endpoint |
+|--|--|
+| POST | /series |
+| GET | /series |
+| GET | /series?page={{page}} |
+| GET | /series/{{serie_id}} |
+| PUT | /series/{{serie_id}} |
+| PATCH | /series/{{serie_id}} |
+| DELETE | /series/{{serie_id}} |
+| DELETE | /series?serie_ids={{serie_ids}} |
+| POST | /series/{{serie_id}}/books |
+| GET | /series/{{serie_id}}/books |
+| GET | /series/{{serie_id}}/books?page={{page}} |
+| GET | /series/{{serie_id}}/books/{{book_id}} |
+| DELETE | /series/{{serie_id}}/books/{{book_id}} |
+| DELETE | /series/{{serie_id}}/books?book_ids={{book_ids}} |
+
 **EditorsPublishers**
 
 publisher_id: uuid  
 editor_id: uuid (user id)  
-editor_ids: uuid array (user ids)  
+editor_ids: uuid array (user ids)
 
 | Method | Endpoint |
 |--|--|
@@ -235,7 +261,7 @@ editor_ids: uuid array (user ids)
 
 author_id : uuid  
 editor_id : uuid (user id)  
-editor_ids: uuid array (user ids)  
+editor_ids: uuid array (user ids)
 
 | Method | Endpoint |
 |--|--|
