@@ -14,8 +14,8 @@ With these principles in mind there will be 6 seperate projects;
 |--|--|--|
 | Core [Class Library] | Models, Exceptions, Interfaces | - |
 | Persistence [Class Library] | Database-related operations for both api and external services | Domain |
-| Infastructure [Class Library] | External services (like notification, stmp, logging etc.) | Domain, Persistence |
-| Application [Class Library] | Application logic | Domain, Persistence, Infastructure |
+| Infrastructure [Class Library] | External services (like notification, stmp, logging etc.) | Domain, Persistence |
+| Application [Class Library] | Application logic | Domain, Persistence, Infrastructure |
 | Api [Web Api Project] | Controllers (get request and return response) | Application |
 | Tests [Class Library] | Unit tests, integration tests etc. | Api |
 
