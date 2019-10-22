@@ -1,4 +1,4 @@
-# Welcome to Cemiyet Docs
+# Welcome to ![Logo v0.1](img/logo.png "Logo v0.1") Docs
 
 **Status**: Working on back-end project structure.
 
