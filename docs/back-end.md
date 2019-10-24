@@ -149,7 +149,6 @@ genre_ids: uuid array
 | GET | /genres?page={{page}} |
 | GET | /genres/{{genre_id}} |
 | PUT | /genres/{{genre_id}} |
-| PATCH | /genres/{{genre_id}} |
 | DELETE | /genres/{{genre_id}} |
 | DELETE | /genres?genre_ids={{genre_ids}} |
 | GET | /genres/{{genre_id}}/books |
