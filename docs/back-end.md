@@ -8,16 +8,20 @@ Main principles to follow;
 - Database-related operations should be abstracted from the rest of the system. That way database changing costs could be minimal.
 - Model related data structures should be separated.
 
-With these principles in mind there will be 6 seperate projects;
+With these principles in mind there will be 10 seperate projects;
 
 | Project | Contents | References |
 |--|--|--|
 | Core [Class Library] | Models, Exceptions, Interfaces | - |
+| Core.Tests [xUnit Test Project] | Tests for Core library | Core |
 | Persistence [Class Library] | Database-related operations for both api and external services | Domain |
+| Persistence.Tests [xUnit Test Project] | Tests for Persistence library | Persistence |
 | Infrastructure [Class Library] | External services (like notification, stmp, logging etc.) | Domain, Persistence |
+| Infrastructure.Tests [xUnit Test Project] | Tests for Infrastructure library | Infrastructure |
 | Application [Class Library] | Application logic | Domain, Persistence, Infrastructure |
+| Application.Tests [xUnit Test Project] | Tests for Application library | Application |
 | Api [Web Api Project] | Controllers (get request and return response) | Application |
-| Tests [Class Library] | Unit tests, integration tests etc. | Api |
+| Api.Tests [xUnit Test Project] | Tests for Api project | Api |
 
 ---
 
