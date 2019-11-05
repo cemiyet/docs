@@ -123,7 +123,7 @@ This section will be replaced eventually by API documentation.
 
 Cemiyet and event related endpoints will be added prior to their update.
 
-**Update:** Implemented endpoints: [API Docs](/api-docs).
+**Update:** Implemented endpoints: [API Docs](/cemiyet/api-docs).
 
 ---
 
