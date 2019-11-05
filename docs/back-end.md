@@ -79,13 +79,13 @@ Will return only users with public profile.
 
 **Paging**
 
-Default page size is 30 items. (This can be changed in the implementation.)
+Default page is 1 and page size is 30 items.
 
 Example;
 
-    GET /books?sortDescending=PrintDate&page=2
+    GET /genres?page=2&pageSize=5
 
-Will return 2nd latest 30 books.
+Will skip first 5 genres and return 2nd 5 genres.
 
 ---
 
@@ -123,40 +123,22 @@ This section will be replaced eventually by API documentation.
 
 Cemiyet and event related endpoints will be added prior to their update.
 
-**Dimensions**
+**Update:** Implemented endpoints: [API Docs](/api-docs).
 
-dimension_id: uuid  
-page: int  
-dimension_ids: uuid array
+---
 
-| Method | Endpoint |
-|--|--|
-| POST | /dimensions |
-| GET | /dimensions |
-| GET | /dimensions?page={{page}} |
-| GET | /dimensions/{{dimension_id}} |
-| PUT | /dimensions/{{dimension_id}} |
-| PATCH | /dimensions/{{dimension_id}} |
-| DELETE | /dimensions/{{dimension_id}} |
-| DELETE | /dimensions?dimension_ids={{dimension_ids}} |
+**Work In Progress**
 
 **Genres**
 
 genre_id: uuid  
 page: int  
-genre_ids: uuid array
+pageSize: int
 
 | Method | Endpoint |
 |--|--|
-| POST | /genres |
-| GET | /genres |
-| GET | /genres?page={{page}} |
-| GET | /genres/{{genre_id}} |
-| PUT | /genres/{{genre_id}} |
-| DELETE | /genres/{{genre_id}} |
-| DELETE | /genres?genre_ids={{genre_ids}} |
 | GET | /genres/{{genre_id}}/books |
-| GET | /genres/{{genre_id}}/books?page={{page}} |
+| GET | /genres/{{genre_id}}/books?page={{page}}&pageSize={{pageSize}} |
 
 **Authors**
 
