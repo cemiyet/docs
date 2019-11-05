@@ -100,6 +100,11 @@
     </ul>
 	    </li>
           
+            <li class="toctree-l1">
+		
+    <a class="" href="/api-docs">API Docs</a>
+	    </li>
+          
         </ul>
       </div>
       &nbsp;
@@ -140,7 +145,7 @@
 <li>Database-related operations should be abstracted from the rest of the system. That way database changing costs could be minimal.</li>
 <li>Model related data structures should be separated.</li>
 </ul>
-<p>With these principles in mind there will be 6 seperate projects;</p>
+<p>With these principles in mind there will be 10 seperate projects;</p>
 <table>
 <thead>
 <tr>
@@ -156,9 +161,19 @@
 <td>-</td>
 </tr>
 <tr>
+<td>Core.Tests [xUnit Test Project]</td>
+<td>Tests for Core library</td>
+<td>Core</td>
+</tr>
+<tr>
 <td>Persistence [Class Library]</td>
 <td>Database-related operations for both api and external services</td>
 <td>Domain</td>
+</tr>
+<tr>
+<td>Persistence.Tests [xUnit Test Project]</td>
+<td>Tests for Persistence library</td>
+<td>Persistence</td>
 </tr>
 <tr>
 <td>Infrastructure [Class Library]</td>
@@ -166,9 +181,19 @@
 <td>Domain, Persistence</td>
 </tr>
 <tr>
+<td>Infrastructure.Tests [xUnit Test Project]</td>
+<td>Tests for Infrastructure library</td>
+<td>Infrastructure</td>
+</tr>
+<tr>
 <td>Application [Class Library]</td>
 <td>Application logic</td>
 <td>Domain, Persistence, Infrastructure</td>
+</tr>
+<tr>
+<td>Application.Tests [xUnit Test Project]</td>
+<td>Tests for Application library</td>
+<td>Application</td>
 </tr>
 <tr>
 <td>Api [Web Api Project]</td>
@@ -176,8 +201,8 @@
 <td>Application</td>
 </tr>
 <tr>
-<td>Tests [Class Library]</td>
-<td>Unit tests, integration tests etc.</td>
+<td>Api.Tests [xUnit Test Project]</td>
+<td>Tests for Api project</td>
 <td>Api</td>
 </tr>
 </tbody>
@@ -290,11 +315,11 @@
 <p>Will return only users with public profile.</p>
 <hr />
 <p><strong>Paging</strong></p>
-<p>Default page size is 30 items. (This can be changed in the implementation.)</p>
+<p>Default page is 1 and page size is 30 items.</p>
 <p>Example;</p>
-<pre><code>GET /books?sortDescending=PrintDate&amp;page=2
+<pre><code>GET /genres?page=2&amp;pageSize=5
 </code></pre>
-<p>Will return 2nd latest 30 books.</p>
+<p>Will skip first 5 genres and return 2nd 5 genres.</p>
 <hr />
 <p>Detailed endpoint list can be found in <a href="#endpoints">Endpoints</a> section.</p>
 <hr />
@@ -314,56 +339,13 @@
 <h2 id="endpoints">Endpoints</h2>
 <p>This section will be replaced eventually by API documentation.</p>
 <p>Cemiyet and event related endpoints will be added prior to their update.</p>
-<p><strong>Dimensions</strong></p>
-<p>dimension_id: uuid<br />
-page: int<br />
-dimension_ids: uuid array</p>
-<table>
-<thead>
-<tr>
-<th>Method</th>
-<th>Endpoint</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>POST</td>
-<td>/dimensions</td>
-</tr>
-<tr>
-<td>GET</td>
-<td>/dimensions</td>
-</tr>
-<tr>
-<td>GET</td>
-<td>/dimensions?page={{page}}</td>
-</tr>
-<tr>
-<td>GET</td>
-<td>/dimensions/{{dimension_id}}</td>
-</tr>
-<tr>
-<td>PUT</td>
-<td>/dimensions/{{dimension_id}}</td>
-</tr>
-<tr>
-<td>PATCH</td>
-<td>/dimensions/{{dimension_id}}</td>
-</tr>
-<tr>
-<td>DELETE</td>
-<td>/dimensions/{{dimension_id}}</td>
-</tr>
-<tr>
-<td>DELETE</td>
-<td>/dimensions?dimension_ids={{dimension_ids}}</td>
-</tr>
-</tbody>
-</table>
+<p><strong>Update:</strong> Implemented endpoints: <a href="/api-docs">API Docs</a>.</p>
+<hr />
+<p><strong>Work In Progress</strong></p>
 <p><strong>Genres</strong></p>
 <p>genre_id: uuid<br />
 page: int<br />
-genre_ids: uuid array</p>
+pageSize: int</p>
 <table>
 <thead>
 <tr>
@@ -372,45 +354,13 @@ genre_ids: uuid array</p>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>POST</td>
-<td>/genres</td>
-</tr>
-<tr>
-<td>GET</td>
-<td>/genres</td>
-</tr>
-<tr>
-<td>GET</td>
-<td>/genres?page={{page}}</td>
-</tr>
-<tr>
-<td>GET</td>
-<td>/genres/{{genre_id}}</td>
-</tr>
-<tr>
-<td>PUT</td>
-<td>/genres/{{genre_id}}</td>
-</tr>
-<tr>
-<td>PATCH</td>
-<td>/genres/{{genre_id}}</td>
-</tr>
-<tr>
-<td>DELETE</td>
-<td>/genres/{{genre_id}}</td>
-</tr>
-<tr>
-<td>DELETE</td>
-<td>/genres?genre_ids={{genre_ids}}</td>
-</tr>
 <tr>
 <td>GET</td>
 <td>/genres/{{genre_id}}/books</td>
 </tr>
 <tr>
 <td>GET</td>
-<td>/genres/{{genre_id}}/books?page={{page}}</td>
+<td>/genres/{{genre_id}}/books?page={{page}}&amp;pageSize={{pageSize}}</td>
 </tr>
 </tbody>
 </table>
