@@ -3,7 +3,7 @@
   "openapi": "3.0.0",
   "info": {
     "title": "Cemiyet",
-    "version": "v0.0.0",
+    "version": "v0.1.0",
     "x-logo": {
       "url": "https://github.com/nuriu/cemiyet-backend/raw/develop/logo.svg?sanitize=true",
       "backgroundColor": "#FFFFFF",
@@ -601,56 +601,6 @@
           }
         }
       }
-    },
-    "/Genres/{id}/books": {
-      "get": {
-        "tags": [
-          "Genres"
-        ],
-        "operationId": "Genres_ListBooks",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "format": "guid"
-            },
-            "x-position": 1
-          },
-          {
-            "name": "Page",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "x-position": 2
-          },
-          {
-            "name": "PageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "x-position": 3
-          }
-        ],
-        "responses": {
-          "400": {
-            "description": "",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GenreNotFoundException"
-                }
-              }
-            }
-          }
-        }
-      }
     }
   },
   "components": {
@@ -731,7 +681,7 @@
       "Dimension": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/BaseEntityOfGuid"
+            "$ref": "#/components/schemas/EntityOfGuid"
           },
           {
             "type": "object",
@@ -749,7 +699,7 @@
           }
         ]
       },
-      "BaseEntityOfGuid": {
+      "EntityOfGuid": {
         "type": "object",
         "x-abstract": true,
         "additionalProperties": false,
@@ -767,10 +717,6 @@
             "format": "date-time"
           },
           "creatorId": {
-            "type": "string",
-            "format": "guid"
-          },
-          "modifierId": {
             "type": "string",
             "format": "guid"
           }
@@ -875,7 +821,7 @@
       "Genre": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/BaseEntityOfGuid"
+            "$ref": "#/components/schemas/EntityOfGuid"
           },
           {
             "type": "object",
