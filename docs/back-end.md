@@ -144,39 +144,23 @@ pageSize: int
 
 author_id: uuid  
 page: int  
-author_ids: uuid array
+pageSize: int
 
 | Method | Endpoint |
 |--|--|
-| POST | /authors |
-| GET | /authors |
-| GET | /authors?page={{page}} |
-| GET | /authors/{{author_id}} |
-| PUT | /authors/{{author_id}} |
-| PATCH | /authors/{{author_id}} |
-| DELETE | /authors/{{author_id}} |
-| DELETE | /authors?author_ids={{author_ids}} |
 | GET | /authors/{{author_id}}/books |
-| GET | /authors/{{author_id}}/books?page={{page}} |
+| GET | /authors/{{author_id}}/books?page={{page}}&pageSize={{pageSize}} |
 | GET | /authors/{{author_id}}/series |
-| GET | /authors/{{author_id}}/series?page={{page}} |
+| GET | /authors/{{author_id}}/series?page={{page}}&pageSize={{pageSize}} |
 
 **Publishers**
 
 publisher_id: uuid  
 page: int  
-publisher_ids: uuid array
+pageSize: int
 
 | Method | Endpoint |
 |--|--|
-| POST | /publishers |
-| GET | /publishers |
-| GET | /publishers?page={{page}} |
-| GET | /publishers/{{publisher_id}} |
-| PUT | /publishers/{{publisher_id}} |
-| PATCH | /publishers/{{publisher_id}} |
-| DELETE | /publishers/{{publisher_id}} |
-| DELETE | /publishers?publisher_ids={{publisher_ids}} |
 | GET | /publishers/{{publisher_id}}/books |
 | GET | /publishers/{{publisher_id}}/books?page={{page}} |
 
