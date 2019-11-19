@@ -367,7 +367,7 @@ pageSize: int</p>
 <p><strong>Authors</strong></p>
 <p>author_id: uuid<br />
 page: int<br />
-author_ids: uuid array</p>
+pageSize: int</p>
 <table>
 <thead>
 <tr>
@@ -377,44 +377,12 @@ author_ids: uuid array</p>
 </thead>
 <tbody>
 <tr>
-<td>POST</td>
-<td>/authors</td>
-</tr>
-<tr>
-<td>GET</td>
-<td>/authors</td>
-</tr>
-<tr>
-<td>GET</td>
-<td>/authors?page={{page}}</td>
-</tr>
-<tr>
-<td>GET</td>
-<td>/authors/{{author_id}}</td>
-</tr>
-<tr>
-<td>PUT</td>
-<td>/authors/{{author_id}}</td>
-</tr>
-<tr>
-<td>PATCH</td>
-<td>/authors/{{author_id}}</td>
-</tr>
-<tr>
-<td>DELETE</td>
-<td>/authors/{{author_id}}</td>
-</tr>
-<tr>
-<td>DELETE</td>
-<td>/authors?author_ids={{author_ids}}</td>
-</tr>
-<tr>
 <td>GET</td>
 <td>/authors/{{author_id}}/books</td>
 </tr>
 <tr>
 <td>GET</td>
-<td>/authors/{{author_id}}/books?page={{page}}</td>
+<td>/authors/{{author_id}}/books?page={{page}}&amp;pageSize={{pageSize}}</td>
 </tr>
 <tr>
 <td>GET</td>
@@ -422,14 +390,14 @@ author_ids: uuid array</p>
 </tr>
 <tr>
 <td>GET</td>
-<td>/authors/{{author_id}}/series?page={{page}}</td>
+<td>/authors/{{author_id}}/series?page={{page}}&amp;pageSize={{pageSize}}</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Publishers</strong></p>
 <p>publisher_id: uuid<br />
 page: int<br />
-publisher_ids: uuid array</p>
+pageSize: int</p>
 <table>
 <thead>
 <tr>
@@ -438,38 +406,6 @@ publisher_ids: uuid array</p>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>POST</td>
-<td>/publishers</td>
-</tr>
-<tr>
-<td>GET</td>
-<td>/publishers</td>
-</tr>
-<tr>
-<td>GET</td>
-<td>/publishers?page={{page}}</td>
-</tr>
-<tr>
-<td>GET</td>
-<td>/publishers/{{publisher_id}}</td>
-</tr>
-<tr>
-<td>PUT</td>
-<td>/publishers/{{publisher_id}}</td>
-</tr>
-<tr>
-<td>PATCH</td>
-<td>/publishers/{{publisher_id}}</td>
-</tr>
-<tr>
-<td>DELETE</td>
-<td>/publishers/{{publisher_id}}</td>
-</tr>
-<tr>
-<td>DELETE</td>
-<td>/publishers?publisher_ids={{publisher_ids}}</td>
-</tr>
 <tr>
 <td>GET</td>
 <td>/publishers/{{publisher_id}}/books</td>
