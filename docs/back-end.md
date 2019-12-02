@@ -129,68 +129,6 @@ Cemiyet and event related endpoints will be added prior to their update.
 
 **Work In Progress**
 
-**Genres**
-
-genre_id: uuid  
-page: int  
-pageSize: int
-
-| Method | Endpoint |
-|--|--|
-| GET | /genres/{{genre_id}}/books |
-| GET | /genres/{{genre_id}}/books?page={{page}}&pageSize={{pageSize}} |
-
-**Authors**
-
-author_id: uuid  
-page: int  
-pageSize: int
-
-| Method | Endpoint |
-|--|--|
-| GET | /authors/{{author_id}}/books |
-| GET | /authors/{{author_id}}/books?page={{page}}&pageSize={{pageSize}} |
-| GET | /authors/{{author_id}}/series |
-| GET | /authors/{{author_id}}/series?page={{page}}&pageSize={{pageSize}} |
-
-**Publishers**
-
-publisher_id: uuid  
-page: int  
-pageSize: int
-
-| Method | Endpoint |
-|--|--|
-| GET | /publishers/{{publisher_id}}/books |
-| GET | /publishers/{{publisher_id}}/books?page={{page}} |
-
-**Books**
-
-book_id: uuid  
-page: int  
-book_isbn: char(13)  
-book_ids: uuid array  
-book_isbns: char(13) array
-
-| Method | Endpoint |
-|--|--|
-| POST | /books |
-| GET | /books |
-| GET | /books?page={{page}} |
-| GET | /books/{{book_id}} |
-| PUT | /books/{{book_id}} |
-| PATCH | /books/{{book_id}} |
-| DELETE | /books/{{book_id}} |
-| DELETE | /books?book_ids={{book_ids}} |
-| POST | /books/{{book_id}}/editions |
-| GET | /books/{{book_id}}/editions |
-| GET | /books/{{book_id}}/editions?page={{page}} |
-| GET | /books/{{book_id}}/editions/{{book_isbn}} |
-| PUT | /books/{{book_id}}/editions/{{book_isbn}} |
-| PATCH | /books/{{book_id}}/editions/{{book_isbn}} |
-| DELETE | /books/{{book_id}}/editions/{{book_isbn}} |
-| DELETE | /books/{{book_id}}/editions?book_isbns={{book_isbns}} |
-
 **Series**
 
 serie_id: uuid  
