@@ -1,6 +1,6 @@
 # Welcome to ![Logo v0.1](img/logo.png "Logo v0.1") Docs
 
-**Status**: Working on [v0.3](https://github.com/nuriu/cemiyet-backend/milestone/4).
+**Status**: Working on [v0.4](https://github.com/nuriu/cemiyet-backend/milestone/5).
 
 ## Vision Statement
 
