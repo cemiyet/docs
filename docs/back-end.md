@@ -129,30 +129,6 @@ Cemiyet and event related endpoints will be added prior to their update.
 
 **Work In Progress**
 
-**Series**
-
-serie_id: uuid  
-page: int  
-book_id: uuid  
-book_ids: uuid array
-
-| Method | Endpoint |
-|--|--|
-| POST | /series |
-| GET | /series |
-| GET | /series?page={{page}} |
-| GET | /series/{{serie_id}} |
-| PUT | /series/{{serie_id}} |
-| PATCH | /series/{{serie_id}} |
-| DELETE | /series/{{serie_id}} |
-| DELETE | /series?serie_ids={{serie_ids}} |
-| POST | /series/{{serie_id}}/books |
-| GET | /series/{{serie_id}}/books |
-| GET | /series/{{serie_id}}/books?page={{page}} |
-| GET | /series/{{serie_id}}/books/{{book_id}} |
-| DELETE | /series/{{serie_id}}/books/{{book_id}} |
-| DELETE | /series/{{serie_id}}/books?book_ids={{book_ids}} |
-
 **Users**
 
 user_id: uuid  
