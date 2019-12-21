@@ -33,6 +33,62 @@ In addition, applications own palette which extends default palette;
 | <div class="palette-color" style="background-color:#45edc6"></div> | Turquoise | #45edc6 |
 | <div class="palette-color" style="background-color:#efeae1"></div> | White Line | #efeae1 |
 
+## Components
+
+**Following is first draft for the components list that subject to change.**
+
+Components under main component module;
+
+- Card
+- Collapsible
+- Editable Text
+- Outline
+- Progress Bar
+- Spinner
+- Table
+
+Components under their own module;
+
+- DateTime
+  - Date
+  - Date Range
+  - Time
+- Elements
+  - Button
+  - Button Group
+  - Divider
+  - Icon
+  - Tag
+  - Text
+- Forms
+  - Controls
+    - Label
+    - Checkbox
+    - Radio
+    - Select
+    - Slider
+    - Switch
+  - Inputs
+    - File
+    - Number
+    - Tag
+    - Text
+    - Text Area
+- Navigations
+  - Breadcrumb
+  - Menu
+  - Navbar
+  - Tabs
+  - Tree
+- Overlays
+  - Alert
+  - Context Menu
+  - Dialog
+  - Drawer
+  - Popover
+  - Toast
+  - Tooltip
+
 <style>
     .palette-color {
         width: 2rem;
