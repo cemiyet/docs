@@ -39,6 +39,7 @@ In addition, applications own palette which extends default palette;
 
 Components under main component module;
 
+- Button Group
 - Card
 - Collapsible
 - Editable Text
@@ -50,44 +51,43 @@ Components under main component module;
 Components under their own module;
 
 - DateTime
-  - Date
-  - Date Range
-  - Time
+    - Date
+    - Date Range
+    - Time
 - Elements
-  - Button
-  - Button Group
-  - Divider
-  - Icon
-  - Tag
-  - Text
-- Forms
-  - Controls
-    - Label
-    - Checkbox
-    - Radio
-    - Select
-    - Slider
-    - Switch
-  - Inputs
-    - File
-    - Number
+    - Button
+    - Divider
+    - Icon
     - Tag
     - Text
-    - Text Area
+- Forms
+    - Controls
+        - Label
+        - Checkbox
+        - Radio
+        - Select
+        - Slider
+        - Switch
+    - Inputs
+        - File
+        - Number
+        - Tag
+        - Text
+        - Text Area
 - Navigations
-  - Breadcrumb
-  - Menu
-  - Navbar
-  - Tabs
-  - Tree
+    - Breadcrumb
+    - Menu
+    - Navbar
+    - Tabs
+    - Tree
 - Overlays
-  - Alert
-  - Context Menu
-  - Dialog
-  - Drawer
-  - Popover
-  - Toast
-  - Tooltip
+    - Alert
+    - Context Menu
+    - Dialog
+    - Drawer
+    - Popover
+    - Toast
+    - Tooltip
 
 <style>
     .palette-color {
