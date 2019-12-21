@@ -12,19 +12,31 @@ Currently, front-end consists of 5 main projects as below;
 
 ## Color Palette
 
-| Name | HEX |
-|--|--|
-| Aquamarine | #61efce |
-| Champagne | #efdab9 |
-| De York | #81c08b |
-| Don Juan | #584b4f |
-| Eclipse | #3d3a3a |
-| Gulf Stream | #78b0a0 |
-| Kournikova | #ffd152 |
-| Orange Peel | #ff9900 |
-| Schooner | #8e8373 |
-| Space Shuttle | #494236 |
-| Toledo | #343233 |
-| Turbo | #ffc31f |
-| Turquoise | #45edc6 |
-| White Line | #efeae1 |
+Cemiyet uses [tailwindcss](https://tailwindcss.com) framework and it comes with [default color palette](https://tailwindcss.com/docs/customizing-colors/#default-color-palette).
+
+In addition, applications own palette which extends default palette;
+
+| Preview | Name | HEX |
+|--|--|--|
+| <div class="palette-color" style="background-color:#61efce"></div> | Aquamarine | #61efce |
+| <div class="palette-color" style="background-color:#efdab9"></div> | Champagne | #efdab9 |
+| <div class="palette-color" style="background-color:#81c08b"></div> | De York | #81c08b |
+| <div class="palette-color" style="background-color:#584b4f"></div> | Don Juan | #584b4f |
+| <div class="palette-color" style="background-color:#3d3a3a"></div> | Eclipse | #3d3a3a |
+| <div class="palette-color" style="background-color:#78b0a0"></div> | Gulf Stream | #78b0a0 |
+| <div class="palette-color" style="background-color:#ffd152"></div> | Kournikova | #ffd152 |
+| <div class="palette-color" style="background-color:#ff9900"></div> | Orange Peel | #ff9900 |
+| <div class="palette-color" style="background-color:#8e8373"></div> | Schooner | #8e8373 |
+| <div class="palette-color" style="background-color:#494236"></div> | Space Shuttle | #494236 |
+| <div class="palette-color" style="background-color:#343233"></div> | Toledo | #343233 |
+| <div class="palette-color" style="background-color:#ffc31f"></div> | Turbo | #ffc31f |
+| <div class="palette-color" style="background-color:#45edc6"></div> | Turquoise | #45edc6 |
+| <div class="palette-color" style="background-color:#efeae1"></div> | White Line | #efeae1 |
+
+<style>
+    .palette-color {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 0.25rem;
+    }
+</style>
