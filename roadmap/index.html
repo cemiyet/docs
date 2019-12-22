@@ -68,7 +68,10 @@
     <a class="current" href="./">Roadmap</a>
     <ul class="subnav">
             
-    <li class="toctree-l2"><a href="#feature-roadmap">Feature Roadmap</a></li>
+    <li class="toctree-l2"><a href="#backend-roadmap">Backend Roadmap</a></li>
+    
+
+    <li class="toctree-l2"><a href="#frontend-roadmap">Frontend Roadmap</a></li>
     
 
     </ul>
@@ -121,7 +124,7 @@
           <div role="main">
             <div class="section">
               
-                <h2 id="feature-roadmap">Feature Roadmap</h2>
+                <h2 id="backend-roadmap">Backend Roadmap</h2>
 <p>Before starting development for every version, initial backlog should be present for <em>itself and next version</em>.</p>
 <ul>
 <li><strong>v0.1 - Genres &amp; Dimensions Update:</strong><ul>
@@ -133,26 +136,28 @@
 </ul>
 </li>
 <li><strong>v0.3 - Books Update:</strong><ul>
-<li>CRUD operations for Book &amp; Serie models.</li>
+<li>CRUD operations for Book &amp; BookEdition models.</li>
 <li>Basic relations between books and related models. (authors, publishers etc.)</li>
 </ul>
 </li>
-<li><strong>v0.4 - Members Update:</strong><ul>
-<li>CRUD operations for Member model.</li>
-<li>Complete Authentication system.</li>
+<li><strong>v0.4 - Series Update:</strong><ul>
+<li>CRUD operations for serie model.</li>
+<li>Basic relations between books and series, series and authors.</li>
 </ul>
 </li>
-<li><strong>v0.5 - Ratings &amp; Lists Update:</strong><ul>
+<li><strong>v0.5 - Members &amp; Tags Update:</strong><ul>
+<li>CRUD operations for Member model.</li>
+<li>Complete Authentication system.</li>
+<li>CRUD operations for User/Book Tag models.</li>
+<li>Advanced relationships between books and users via tags.</li>
+</ul>
+</li>
+<li><strong>v0.6 - Ratings &amp; Lists Update:</strong><ul>
 <li>CRUD operations for Rating &amp; List related models.</li>
 <li>Basic rating system.</li>
 <li>Basic relations between ratings, members and books.</li>
 <li>CRUD operations for Book List models.</li>
 <li>Advanced relationships between books and users/authors/publishers via custom lists.</li>
-</ul>
-</li>
-<li><strong>v0.6 - Tags Update:</strong> ❓<ul>
-<li>CRUD operations for User/Book Tag models.</li>
-<li>Advanced relationships between books and users via tags.</li>
 </ul>
 </li>
 <li><strong>v0.7 - Admins &amp; Editors Update:</strong><ul>
@@ -169,11 +174,60 @@
 <li>CRUD operations for Dealer model.</li>
 </ul>
 </li>
-<li><strong>v1.0 - Ötüken (MVP):</strong><ul>
+<li><strong>v1.0 - Ötüken Release (MVP):</strong><ul>
+<li>Future-proof clean architecture based on CQRS principle.</li>
 <li>Complete Authentication/Authorization system.</li>
-<li>Future-proof book centered model system.</li>
-<li>Complete management panels for Admins &amp; Editors.</li>
+<li>Complete management systems for Admins &amp; Editors.</li>
 <li>Special actors and interaction microsystems that could lead to potential income models.</li>
+</ul>
+</li>
+</ul>
+<h2 id="frontend-roadmap">Frontend Roadmap</h2>
+<ul>
+<li><strong>v0.1 - Landing Update:</strong><ul>
+<li>Basic landing page without working components.</li>
+</ul>
+</li>
+<li><strong>v0.2 - Components Update</strong><ul>
+<li>Initial release of the required components.</li>
+</ul>
+</li>
+<li><strong>v0.3 - Api Update</strong><ul>
+<li>Api entity models and communication service.</li>
+</ul>
+</li>
+<li><strong>v0.4 - Form Components Update</strong><ul>
+<li>Functionally complete elements and forms module of the components library.</li>
+</ul>
+</li>
+<li><strong>v0.5 - Feature Update</strong><ul>
+<li>Fully functional landing page with user registration and login.</li>
+<li>UI designs for all pages should be ready to development by this release.</li>
+</ul>
+</li>
+<li><strong>v0.6 - DateTime Components Update</strong><ul>
+<li>Functionally complete date time module of the components library.</li>
+</ul>
+</li>
+<li><strong>v0.7 - Details Update</strong><ul>
+<li>Fully functional details pages for related entities.</li>
+</ul>
+</li>
+<li><strong>v0.8 - Navigation Components Update</strong><ul>
+<li>Functionally complete navigations module of the components library.</li>
+<li>Partially complete overlay components.</li>
+</ul>
+</li>
+<li><strong>v0.9 - Integration Update</strong><ul>
+<li>Future-proof feature-based front-end architecture.</li>
+<li>Fully functional feature complete pages.</li>
+</ul>
+</li>
+<li><strong>v1.0 - Altai Release(MVP):</strong><ul>
+<li>Complete production quality semi-dark ui theme.</li>
+<li>Complete Authentication/Authorization guard system.</li>
+<li>Complete management panels for Admins &amp; Editors.</li>
+<li>Future-proof components and core libraries.</li>
 </ul>
 </li>
 </ul>
