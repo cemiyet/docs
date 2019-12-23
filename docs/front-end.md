@@ -96,3 +96,9 @@ Components under their own module;
         border-radius: 0.25rem;
     }
 </style>
+
+## UI Design
+
+### Landing Page
+
+![Landing Page](img/Landing-Web.png "Landing Page")
