@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Modules - Cemiyet</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Modules";
+        var mkdocs_page_input_path = "backend/modules.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Cemiyet
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Backend</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../roadmap/">Roadmap</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Modules</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-identity-module">1. Identity Module</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-catalog-module">2. Catalog Module</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-shelves-module">3. Shelves Module</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4-reviews-module">4. Reviews Module</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#5-social-module">5. Social Module</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#6-discussions-module">6. Discussions Module</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#7-challenges-module">7. Challenges Module</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#8-gamification-module">8. Gamification Module</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#9-recommendations-module">9. Recommendations Module</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#10-search-module">10. Search Module</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#11-monetization-module">11. Monetization Module</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#12-analytics-module">12. Analytics Module</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#13-admin-module">13. Admin Module</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#14-media-module">14. Media Module</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#14-internationalization-module">14. Internationalization Module</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../data-specification/">Data Specification</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Frontend</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../frontend/roadmap/">Roadmap</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../frontend/frontend/">Frontend</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Cemiyet</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Backend</li>
+      <li class="breadcrumb-item active">Modules</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="backend-modules">Backend Modules</h1>
+<h2 id="1-identity-module">1. Identity Module</h2>
+<p>Manages authentication, authorization, and account security; stores user profiles, avatars, bios, and roles; supports OAuth integrations and premium status tracking.</p>
+<p><strong>Core Features</strong></p>
+<ul>
+<li>User registration/login (email/password, OAuth)</li>
+<li>User profiles: username, avatar URL, bio</li>
+<li>Password reset, email verification</li>
+<li>Role basics (normal user, admin)</li>
+<li>Premium subscription flag (basic support)</li>
+</ul>
+<hr />
+<h2 id="2-catalog-module">2. Catalog Module</h2>
+<p>Central repository of books, authors, series, genres, and publishers; supports metadata import from external APIs; provides public read-only access to other modules.</p>
+<p><strong>Core Features</strong></p>
+<ul>
+<li>Store/manage books, authors, series, genres</li>
+<li>Import metadata from public APIs (Google Books, Open Library)</li>
+<li>Expose read-only queries to other modules</li>
+<li>Admin interface for corrections/updates</li>
+</ul>
+<hr />
+<h2 id="3-shelves-module">3. Shelves Module</h2>
+<p>Handles default and custom user shelves (“Want to Read”, “Currently Reading”, “Read”); tracks book progress by pages or percentage; supports privacy settings and shelf organization.</p>
+<p><strong>Core Features</strong></p>
+<ul>
+<li>Default shelves: “Want to Read”, “Currently Reading”, “Read”</li>
+<li>Custom shelves creation (limited in MVP)</li>
+<li>Track reading progress (pages, percent)</li>
+<li>Add/remove/move books on shelves</li>
+</ul>
+<hr />
+<h2 id="4-reviews-module">4. Reviews Module</h2>
+<p>Stores star ratings, text reviews, spoiler flags, and review comments; supports likes, reactions, and moderation tools for quality control.</p>
+<p><strong>Core Features</strong></p>
+<ul>
+<li>Post, update, delete reviews with star ratings</li>
+<li>Spoiler tags for text reviews</li>
+<li>Comments on reviews (basic)</li>
+<li>Like reviews</li>
+</ul>
+<hr />
+<h2 id="5-social-module">5. Social Module</h2>
+<p>Manages follow relationships, social activity feed, and notifications; records user-to-user interactions and broadcasts activity events to followers.</p>
+<p><strong>Core Features</strong></p>
+<ul>
+<li>Follow/unfollow users</li>
+<li>Activity feed for followed users (new books, reviews)</li>
+<li>Basic notifications for new followers, comments, likes</li>
+</ul>
+<hr />
+<h2 id="6-discussions-module">6. Discussions Module</h2>
+<p>Hosts book-specific and general community threads; supports nested posts, likes, and moderation for spam or abuse control.</p>
+<p><strong>Core Features</strong></p>
+<ul>
+<li>Book-specific and general discussion forums</li>
+<li>Support for nested threads and replies</li>
+<li>Private book clubs (invite-only groups)</li>
+<li>
+<p>Moderation tools for spam and abuse control</p>
+</li>
+<li>
+<p>Automated spam filtering and content flagging (Phase 3+)</p>
+</li>
+<li>Advanced moderation workflows (AI-assisted) (Phase 3+)</li>
+<li>Support for multimedia posts (images, links) (Phase 3+)</li>
+<li>Analytics on community engagement (Phase 3+)</li>
+</ul>
+<hr />
+<h2 id="7-challenges-module">7. Challenges Module</h2>
+<p>Defines annual goals and thematic challenges; tracks participation and progress; integrates with Shelves to auto-update completion status.</p>
+<p><strong>Core Features</strong></p>
+<ul>
+<li>Create, join, and track reading challenges (e.g., “Read 10 books in June”) (Phase 2+)</li>
+<li>Personal and community-wide goals</li>
+<li>Progress tracking and notifications on challenge status</li>
+</ul>
+<hr />
+<h2 id="8-gamification-module">8. Gamification Module</h2>
+<p>Awards badges, points, and streaks for reading-related actions; maintains leaderboards; supports in-app reward redemption and microtransactions.</p>
+<p><strong>Core Features</strong></p>
+<ul>
+<li>Award badges, points, and streaks for actions (reading, reviews, challenges)</li>
+<li>Leaderboards and achievement tracking</li>
+<li>In-app store for redeeming points (avatar themes, badges)</li>
+</ul>
+<hr />
+<h2 id="9-recommendations-module">9. Recommendations Module</h2>
+<p>Generates personalized book suggestions via AI and collaborative filtering; surfaces trending content and sponsored recommendations.</p>
+<p><strong>Core Features</strong></p>
+<ul>
+<li>Collaborative filtering-based book suggestions</li>
+<li>Trending and popular book surfaces</li>
+<li>Sponsored recommendation slots (marked clearly)</li>
+</ul>
+<hr />
+<h2 id="10-search-module">10. Search Module</h2>
+<p>Provides full-text and faceted search over books, authors, users, and lists; supports sorting, pagination, and advanced filters for premium users.</p>
+<p><strong>Core Features</strong></p>
+<ul>
+<li>Full-text search on books, authors, users</li>
+<li>Basic filtering (genre, author name)</li>
+<li>
+<p>Pagination and sorting</p>
+</li>
+<li>
+<p>Add premium filters (page count, publication year, subgenre) (Phase 2+)</p>
+</li>
+<li>Sponsored search result placements (Phase 2+)</li>
+<li>Improved indexing and query optimization (Phase 2+)</li>
+</ul>
+<hr />
+<h2 id="11-monetization-module">11. Monetization Module</h2>
+<p>Centralizes all revenue streams including subscriptions, affiliate sales, sponsorships, in-app purchases, and event ticketing; tracks and reports financial performance.</p>
+<p><strong>Core Features</strong></p>
+<ul>
+<li>Free tier user management</li>
+<li>Basic subscription plan with Stripe sandbox integration</li>
+<li>
+<p>Track premium status in Identity module</p>
+</li>
+<li>
+<p>Add microtransactions for buying points/coins (Phase 3+)</p>
+</li>
+<li>Implement affiliate sales tracking (Phase 3+)</li>
+<li>Basic sponsored content and ad campaigns (Phase 3+)</li>
+</ul>
+<hr />
+<h2 id="12-analytics-module">12. Analytics Module</h2>
+<p>Collects and processes usage data, engagement metrics, and system telemetry; supports dashboards, reporting, and data export; ensures privacy compliance.</p>
+<p><strong>Core Features</strong></p>
+<ul>
+<li>Collect user engagement metrics (daily active users, reads, reviews)</li>
+<li>System telemetry (errors, performance)</li>
+<li>Dashboard for key KPIs</li>
+<li>Exportable reports</li>
+</ul>
+<hr />
+<h2 id="13-admin-module">13. Admin Module</h2>
+<p>Provides tools for user and content moderation, bans, content flags, and workflow management; handles publisher/author management and access controls.</p>
+<p><strong>Core Features</strong></p>
+<ul>
+<li>User moderation tools (bans, suspensions)</li>
+<li>Content flagging and review workflows</li>
+<li>Publisher and author management interface</li>
+<li>Audit logging and role-based access control</li>
+</ul>
+<hr />
+<h2 id="14-media-module">14. Media Module</h2>
+<p>Manages user-generated media uploads (avatars, book covers, audio snippets); handles storage, processing, CDN integration, and content delivery.</p>
+<p><strong>Core Features</strong></p>
+<ul>
+<li>Upload and store user avatars and book covers</li>
+<li>Audio snippet uploads (audiobook samples)</li>
+<li>Image processing (resizing, optimization)</li>
+<li>CDN integration for fast delivery</li>
+</ul>
+<hr />
+<h2 id="14-internationalization-module">14. Internationalization Module</h2>
+<p>Provides multilingual and locale-aware support for both UI and user-generated content. Handles language detection, translation resource management, and formatting of dates, numbers, and currencies according to user preferences or browser settings. From MVP, supports at least <strong>two languages</strong> (e.g., English + Turkish) with the ability to expand. Includes a simple translation resource store and integration hooks for crowdsource translation in future phases.</p>
+<p><strong>Core Features</strong></p>
+<ul>
+<li><strong>Language &amp; locale detection</strong> (from browser, user profile, or request headers)</li>
+<li><strong>UI text translation</strong> via resource files or database-backed key-value store</li>
+<li><strong>Culture-aware formatting</strong> (dates, numbers, times, currency)</li>
+<li><strong>Fallback mechanism</strong> (if translation missing, fall back to default language)</li>
+<li><strong>Content tagging</strong> for language (store <code>languageCode</code> with user-generated content)</li>
+<li><strong>Admin translation editor</strong> (Phase 2+)</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../roadmap/" class="btn btn-neutral float-left" title="Roadmap"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../data-specification/" class="btn btn-neutral float-right" title="Data Specification">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../roadmap/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../data-specification/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
