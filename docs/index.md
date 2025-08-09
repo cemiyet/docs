@@ -1,19 +1,14 @@
 # Welcome to ![Logo v0.1](img/logo.png "Logo v0.1") Docs
 
-**Status**: Working on [front-end](https://github.com/nuriu/cemiyet-frontend).
+**Status**: Working on [back-end](https://github.com/cemiyet/backend).
 
 ## Vision Statement
 
-For readers of all kind who want to track their readings, socialize with people that has similar tastes and maybe keep in touch with authors and/or publishers.
+Cemiyet is a social and personal reading platform designed to help book lovers track their reading habits, discover new titles, and connect with like-minded readers.
+The platform centers on three pillars:
 
-Cemiyet is a personal tracking and networking application that allow it's users (readers, authors and publishers) to track their readings and socialize with others around them.
+1. **Personalization** — Allow users to organize their reading journey with shelves, reviews, and progress tracking.
+2. **Community** — Foster meaningful discussions, sharing, and recommendations within a trusted, reader-focused environment.
+3. **Discovery** — Enable book exploration through rich catalogs, search, and user-generated content.
 
-Unlike similar applications Cemiyet focuses on local groups and reinterprets socializing with that groups in mind.
-
-## Glossary
-
-| Symbol | Meaning |
-| :--: | -- |
-| ❓ | it's not accepted yet |
-| 💶 | potential income model |
-| 🆘 | help needed |
+While the initial release focuses on these core experiences, Cemiyet is designed to evolve into a hub for local book clubs, author and publisher engagement, and literary events, bringing the reading community closer both online and offline.

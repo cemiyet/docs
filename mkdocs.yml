@@ -2,9 +2,10 @@ site_name: Cemiyet
 theme: readthedocs
 nav:
   - Home: index.md
-  - Requirements: requirements.md
-  - Data Specification: data-specification.md
-  - Roadmap: roadmap.md
-  - Backend: back-end.md
-  - API Docs: /cemiyet/api-docs
-  - Frontend: front-end.md
+  - Backend:
+      - Roadmap: backend/roadmap.md
+      - Modules: backend/modules.md
+      - Data Specification: backend/data-specification.md
+  - Frontend:
+      - Roadmap: frontend/roadmap.md
+      - Frontend: frontend/frontend.md
